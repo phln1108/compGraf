@@ -6,16 +6,24 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8g6l"]
 size = Vector2(128, 128)
 
-[node name="Card" type="Node2D"]
+[node name="Card" type="Area2D"]
 script = ExtResource("1_d41f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_2ytoe")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Label" type="Label" parent="."]
+offset_left = -104.0
+offset_top = -160.0
+offset_right = 104.0
+offset_bottom = -65.0
+text = "eu posso ser um pouco "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_v8g6l")
 
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

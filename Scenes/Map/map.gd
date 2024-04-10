@@ -17,3 +17,24 @@ func _process(delta):
 
 func _on_card_dragging(is_dragging):
 	can_drag = is_dragging
+
+
+func _on_no_area_entered(area):
+	print(area)
+	if area is Card:
+		area.setText(Card.TextLabel.NO)
+
+
+func _on_no_area_exited(area):
+	if area is Card:
+		area.setText(Card.TextLabel.EMPTY)
+
+
+func _on_yes_area_entered(area):
+	if area is Card:
+		area.setText(Card.TextLabel.YES)
+
+
+func _on_yes_area_exited(area):
+	if area is Card:
+		area.setText(Card.TextLabel.EMPTY)
