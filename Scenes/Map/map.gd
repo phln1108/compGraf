@@ -1,26 +1,30 @@
 extends Node2D
 
 var can_drag: bool = false
-
+var velocity = 500
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if can_drag:
-		$Card.global_position = get_global_mouse_position()
+		#$Card.global_position = get_global_mouse_position()
+		#$Card.look_at($CardPoint/AncorPoint.global_position)
+		$AncorPoint.look_at(get_global_mouse_position())
+		$AncorPoint.rotation_degrees = clamp($AncorPoint.rotation_degrees + 90 , -45, 45)
+		#if $AncorPoint.rotation_degrees > 45:
+			#$AncorPoint.rotation_degrees = 45
+		#if $AncorPoint.rotation_degrees < -45:
+			#$AncorPoint.rotation_degrees = -45
 	else:
-		$Card.global_position = $CardPoint.global_position
-
-
+		#$AncorPoint/Card.global_position += ($CardPoint.global_position - $AncorPoint/Card.global_position) * velocity * delta
+		#$AncorPoint.rotation_degrees = clamp($AncorPoint.rotation_degrees - (velocity * delta),0,180)
+		$AncorPoint.rotation_degrees = 0
 func _on_card_dragging(is_dragging):
 	can_drag = is_dragging
 
-
 func _on_no_area_entered(area):
-	print(area)
 	if area is Card:
 		area.setText(Card.TextLabel.NO)
 

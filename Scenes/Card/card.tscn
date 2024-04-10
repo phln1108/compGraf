@@ -13,13 +13,13 @@ script = ExtResource("1_d41f0")
 texture = ExtResource("1_2ytoe")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -104.0
-offset_top = -160.0
-offset_right = 104.0
+offset_left = -192.0
+offset_top = -256.0
+offset_right = 192.0
 offset_bottom = -65.0
-text = "eu posso ser um pouco "
+text = "Text Here"
 horizontal_alignment = 1
-vertical_alignment = 1
+vertical_alignment = 2
 autowrap_mode = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
