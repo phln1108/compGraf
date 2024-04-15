@@ -7,6 +7,8 @@ var is_dragging: bool = false
 var yesText: String = "yes"
 var noText: String = "no"
 
+var textSelected: TextLabel = TextLabel.EMPTY
+
 enum TextLabel{EMPTY,YES,NO}
 
 signal dragging
@@ -26,6 +28,7 @@ func _process(delta):
 			emit_signal("dragging",is_dragging)
 	
 func setText(textlabel: TextLabel):
+	textSelected = textlabel
 	match(textlabel):
 		TextLabel.EMPTY:
 			$Label.text = ""

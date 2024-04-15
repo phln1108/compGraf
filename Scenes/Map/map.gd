@@ -30,7 +30,7 @@ func _on_no_area_entered(area):
 		area.setText(Card.TextLabel.NO)
 
 func _on_no_area_exited(area):
-	if area is Card:
+	if area is Card and area.textSelected == Card.TextLabel.NO:
 		area.setText(Card.TextLabel.EMPTY)
 
 func _on_yes_area_entered(area):
@@ -38,5 +38,5 @@ func _on_yes_area_entered(area):
 		area.setText(Card.TextLabel.YES)
 
 func _on_yes_area_exited(area):
-	if area is Card:
+	if area is Card and area.textSelected == Card.TextLabel.YES:
 		area.setText(Card.TextLabel.EMPTY)

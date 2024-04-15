@@ -23,7 +23,7 @@ position = Vector2(576, 324)
 editor_draw_limits = true
 
 [node name="CardMenu" type="Node2D" parent="."]
-position = Vector2(-384, 0)
+position = Vector2(-320, 0)
 
 [node name="MainRect" type="ColorRect" parent="CardMenu"]
 offset_left = 448.0
@@ -43,7 +43,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="AncorPoint" type="Marker2D" parent="CardMenu"]
-position = Vector2(576, 416)
+position = Vector2(576, 480)
 
 [node name="Card" parent="CardMenu/AncorPoint" instance=ExtResource("1_tinaq")]
 position = Vector2(0, -96)
@@ -59,6 +59,12 @@ shape = SubResource("RectangleShape2D_x2oxu")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardMenu/NoArea"]
 position = Vector2(736, 288)
 shape = SubResource("RectangleShape2D_wa8ah")
+
+[node name="Header" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 64.0
+mouse_filter = 2
+color = Color(0.380392, 0.380392, 0.380392, 1)
 
 [connection signal="dragging" from="CardMenu/AncorPoint/Card" to="." method="_on_card_dragging"]
 [connection signal="area_entered" from="CardMenu/YesArea" to="." method="_on_yes_area_entered"]

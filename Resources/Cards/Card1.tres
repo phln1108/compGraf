@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://bi38dmp5srs6g"]
+
+[ext_resource type="Script" path="res://Resources/CardResource/CardResource.gd" id="1_kux6y"]
+[ext_resource type="Texture2D" uid="uid://bjf0s1tqwtg4t" path="res://icon.svg" id="2_30ubt"]
+
+[resource]
+script = ExtResource("1_kux6y")
+sprite = ExtResource("2_30ubt")
+text = "opa"
+noMsg = "cara"
+yesMsg = "coroa"
+yesEducation = -10.0
+yesIncome = 10.0
+yesSocial = 1.0
+yesHealth = 5.0
+noEducation = -5.0
+noIncome = 10.0
+noSocial = -10.0
+noHealth = 0.0
