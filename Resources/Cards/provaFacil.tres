@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://biir6cd1ml3jv"]
+
+[ext_resource type="Script" path="res://Resources/CardResource/CardResource.gd" id="1_0qe8b"]
+[ext_resource type="Texture2D" uid="uid://b6tss4l4qp55o" path="res://assets/education.png" id="2_20td1"]
+
+[resource]
+script = ExtResource("1_0qe8b")
+sprite = ExtResource("2_20td1")
+text = "Uma prova facil está vindo!"
+noMsg = "Nem quero estudar"
+yesMsg = "Vou estudar mesmo assim!"
+yesEducation = 5.0
+yesIncome = 0.0
+yesSocial = -2.0
+yesHealth = -1.0
+noEducation = -5.0
+noIncome = 0.0
+noSocial = 0.0
+noHealth = 0.0

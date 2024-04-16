@@ -3,12 +3,24 @@ extends Node2D
 var can_drag: bool = false
 var velocity = 450
 
-var ancor: Marker2D
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	ancor = $CardMenu/AncorPoint
+@onready var ancor: Marker2D = $CardMenu/AncorPoint
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+@onready var incomeBar = $ColorRect/IncomeBar
+@onready var educationBar = $ColorRect/EducationBar
+@onready var healthBar = $ColorRect/HealthBar
+@onready var socialBar = $ColorRect/SocialBar
+
+
+func _ready():
+	SignalBus.connect("cardSideChosed",on_card_chose_side)
+
+
+func on_card_chose_side(textSelected,education,health,income,social):
+	incomeBar.value += income
+	educationBar.value += education
+	healthBar.value += health
+	socialBar.value += social
+
 func _process(delta):
 	if can_drag:
 		#$Card.global_position = get_global_mouse_position()

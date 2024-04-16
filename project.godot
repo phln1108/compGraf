@@ -14,6 +14,11 @@ config/name="compGraf"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+CardHandler="*res://singletons/CardHandler.gd"
+SignalBus="*res://singletons/SignalBus.gd"
+
 [debug]
 
 gdscript/warnings/untyped_declaration=1

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://bi38dmp5srs6g"]
+
+[ext_resource type="Script" path="res://Resources/CardResource/CardResource.gd" id="1_cit0g"]
+[ext_resource type="Texture2D" uid="uid://e8t1d34x1rhu" path="res://assets/wallet.png" id="2_7cjfw"]
+
+[resource]
+script = ExtResource("1_cit0g")
+sprite = ExtResource("2_7cjfw")
+text = "Você tem que passar a noite resolvendo um um problema com do trabalho, mas seu chefe irá lhe reconpensar por isso"
+noMsg = "Ir dormir"
+yesMsg = "Fazer Hora extra"
+yesEducation = 5.0
+yesIncome = 20.0
+yesSocial = 0.0
+yesHealth = -20.0
+noEducation = 0.0
+noIncome = 0.0
+noSocial = 0.0
+noHealth = 10.0

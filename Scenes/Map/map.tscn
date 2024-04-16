@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cebdwaibf5isv"]
+[gd_scene load_steps=10 format=3 uid="uid://cebdwaibf5isv"]
 
 [ext_resource type="Script" path="res://Scenes/Map/map.gd" id="1_d38tv"]
 [ext_resource type="PackedScene" uid="uid://clfepkedxjswg" path="res://Scenes/Card/card.tscn" id="1_tinaq"]
+[ext_resource type="Texture2D" uid="uid://dgo2gqhau23vo" path="res://assets/Backround.jpg" id="2_lrgqk"]
+[ext_resource type="Texture2D" uid="uid://e8t1d34x1rhu" path="res://assets/wallet.png" id="4_ygpce"]
+[ext_resource type="Texture2D" uid="uid://b6tss4l4qp55o" path="res://assets/education.png" id="5_n6oij"]
+[ext_resource type="Texture2D" uid="uid://bxguj0m3doe7k" path="res://assets/cardiogram.png" id="6_uxo22"]
+[ext_resource type="Texture2D" uid="uid://w2015ctdy3yx" path="res://assets/chat.png" id="7_m3y76"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2oxu"]
 size = Vector2(64, 64)
@@ -12,7 +17,14 @@ size = Vector2(64, 64)
 [node name="Map" type="Node2D"]
 script = ExtResource("1_d38tv")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_lrgqk")
+expand_mode = 1
+
 [node name="Background" type="ColorRect" parent="."]
+visible = false
 offset_right = 1152.0
 offset_bottom = 648.0
 mouse_filter = 2
@@ -23,24 +35,15 @@ position = Vector2(576, 324)
 editor_draw_limits = true
 
 [node name="CardMenu" type="Node2D" parent="."]
-position = Vector2(-320, 0)
+position = Vector2(0, -48)
 
 [node name="MainRect" type="ColorRect" parent="CardMenu"]
 offset_left = 448.0
+offset_top = 48.0
 offset_right = 704.0
-offset_bottom = 648.0
+offset_bottom = 696.0
 mouse_filter = 2
-color = Color(0.141176, 0.141176, 0.141176, 1)
-
-[node name="Label" type="Label" parent="CardMenu"]
-offset_left = 448.0
-offset_top = 96.0
-offset_right = 704.0
-offset_bottom = 224.0
-text = "Text Here"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
+color = Color(0.141176, 0.141176, 0.141176, 0.494118)
 
 [node name="AncorPoint" type="Marker2D" parent="CardMenu"]
 position = Vector2(576, 480)
@@ -51,20 +54,81 @@ position = Vector2(0, -96)
 [node name="YesArea" type="Area2D" parent="CardMenu"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardMenu/YesArea"]
-position = Vector2(416, 288)
+position = Vector2(384, 336)
 shape = SubResource("RectangleShape2D_x2oxu")
 
 [node name="NoArea" type="Area2D" parent="CardMenu"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardMenu/NoArea"]
-position = Vector2(736, 288)
+position = Vector2(768, 336)
 shape = SubResource("RectangleShape2D_wa8ah")
 
-[node name="Header" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 64.0
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 448.0
+offset_right = 704.0
+offset_bottom = 104.0
 mouse_filter = 2
-color = Color(0.380392, 0.380392, 0.380392, 1)
+color = Color(0.309804, 0.309804, 0.309804, 1)
+
+[node name="incomeIcon" type="Sprite2D" parent="ColorRect"]
+position = Vector2(44, 20)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("4_ygpce")
+
+[node name="IncomeBar" type="ProgressBar" parent="ColorRect"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 56.0
+offset_bottom = 96.0
+mouse_filter = 2
+value = 50.0
+fill_mode = 3
+
+[node name="educationIcon" type="Sprite2D" parent="ColorRect"]
+position = Vector2(100, 20)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("5_n6oij")
+
+[node name="EducationBar" type="ProgressBar" parent="ColorRect"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 40.0
+offset_right = 112.0
+offset_bottom = 96.0
+mouse_filter = 2
+value = 50.0
+fill_mode = 3
+
+[node name="HealthIcon" type="Sprite2D" parent="ColorRect"]
+position = Vector2(156, 20)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("6_uxo22")
+
+[node name="HealthBar" type="ProgressBar" parent="ColorRect"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 40.0
+offset_right = 168.0
+offset_bottom = 96.0
+mouse_filter = 2
+value = 50.0
+fill_mode = 3
+
+[node name="SocialIcon" type="Sprite2D" parent="ColorRect"]
+position = Vector2(212, 20)
+scale = Vector2(0.0937498, 0.09375)
+texture = ExtResource("7_m3y76")
+
+[node name="SocialBar" type="ProgressBar" parent="ColorRect"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 40.0
+offset_right = 224.0
+offset_bottom = 96.0
+mouse_filter = 2
+value = 50.0
+fill_mode = 3
 
 [connection signal="dragging" from="CardMenu/AncorPoint/Card" to="." method="_on_card_dragging"]
 [connection signal="area_entered" from="CardMenu/YesArea" to="." method="_on_yes_area_entered"]

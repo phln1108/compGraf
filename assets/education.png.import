@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hclwk66mchy4"
-path="res://.godot/imported/vecteezy_vector-pixel-art-book-icon-for-game-development_7816869.jpg-8ea21d3f3182d7cb1f9083e109026173.ctex"
+uid="uid://b6tss4l4qp55o"
+path="res://.godot/imported/education.png-5c1865a3570f71b3c82b8e824e3ffcdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vecteezy_vector-pixel-art-book-icon-for-game-development_7816869.jpg"
-dest_files=["res://.godot/imported/vecteezy_vector-pixel-art-book-icon-for-game-development_7816869.jpg-8ea21d3f3182d7cb1f9083e109026173.ctex"]
+source_file="res://assets/education.png"
+dest_files=["res://.godot/imported/education.png-5c1865a3570f71b3c82b8e824e3ffcdc.ctex"]
 
 [params]
 
