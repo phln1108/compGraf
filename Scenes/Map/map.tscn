@@ -17,7 +17,7 @@ size = Vector2(64, 64)
 [node name="Map" type="Node2D"]
 script = ExtResource("1_d38tv")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackgroundImage" type="TextureRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("2_lrgqk")
@@ -53,13 +53,13 @@ position = Vector2(0, -96)
 
 [node name="YesArea" type="Area2D" parent="CardMenu"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CardMenu/YesArea"]
+[node name="YesCollisionShape" type="CollisionShape2D" parent="CardMenu/YesArea"]
 position = Vector2(384, 336)
 shape = SubResource("RectangleShape2D_x2oxu")
 
 [node name="NoArea" type="Area2D" parent="CardMenu"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CardMenu/NoArea"]
+[node name="NoCollisionShape" type="CollisionShape2D" parent="CardMenu/NoArea"]
 position = Vector2(768, 336)
 shape = SubResource("RectangleShape2D_wa8ah")
 

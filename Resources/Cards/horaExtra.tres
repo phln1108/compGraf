@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_cit0g")
 sprite = ExtResource("2_7cjfw")
-text = "Você tem que passar a noite resolvendo um um problema com do trabalho, mas seu chefe irá lhe reconpensar por isso"
+text = "Você tem que passar a noite resolvendo um problema no trabalho, mas seu chefe irá lhe recompensar por isso"
 noMsg = "Ir dormir"
 yesMsg = "Fazer Hora extra"
 yesEducation = 5.0
