@@ -17,3 +17,5 @@ class_name CardResource
 @export var noIncome:    float = 0
 @export var noSocial:    float = 0
 @export var noHealth:    float = 0
+
+@export var yesPath: Array[CardResource] = []

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardResource" load_steps=3 format=3 uid="uid://onc3sd35wtga"]
+
+[ext_resource type="Script" path="res://Resources/CardResource/CardResource.gd" id="1_177w2"]
+[ext_resource type="Resource" uid="uid://cw8nuklllj0su" path="res://Resources/Cards/upgradePC.tres" id="2_0jwxn"]
+
+[resource]
+script = ExtResource("1_177w2")
+text = ""
+noMsg = ""
+yesMsg = ""
+yesEducation = 0.0
+yesIncome = 0.0
+yesSocial = 0.0
+yesHealth = 0.0
+noEducation = 0.0
+noIncome = 0.0
+noSocial = 0.0
+noHealth = 0.0
+yesPath = Array[ExtResource("1_177w2")]([ExtResource("2_0jwxn")])
