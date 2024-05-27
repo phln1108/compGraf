@@ -1,30 +1,51 @@
 extends Node2D
 
+var explosion =  preload("res://Scenes/Explosion/explosion.tscn")
+
 var can_drag: bool = false
+var is_returned: bool = true
 var velocity = 450
 
 @onready var ancor: Marker2D = $CardMenu/AncorPoint
+@onready var card = $CardMenu/AncorPoint/Card
 
-@onready var incomeBar = $ColorRect/IncomeBar
-@onready var educationBar = $ColorRect/EducationBar
-@onready var healthBar = $ColorRect/HealthBar
-@onready var socialBar = $ColorRect/SocialBar
+
+@onready var incomeBar = $ColorRect/incomeBar
+@onready var educationBar = $ColorRect/educationBar
+@onready var healthBar = $ColorRect/healthBar
+@onready var socialBar = $ColorRect/socialBar
 
 
 func _ready():
 	SignalBus.connect("cardSideChosed",on_card_chose_side)
 
-
 func on_card_chose_side(textSelected,education,health,income,social):
-	incomeBar.value += income
-	educationBar.value += education
-	healthBar.value += health
-	socialBar.value += social
+	incomeBar.addValue(income)
+	educationBar.addValue(education)
+	healthBar.addValue(health)
+	socialBar.addValue(social)
+	
+	var instance = explosion.instantiate()
+	add_child(instance)
+	instance.z_index = 10
+	instance.global_position = card.global_position 
+	instance.connect("end",on_boom_end)	
+	instance.boom()
+	ancor.visible = false
+	is_returned = false
+	
+func on_boom_end():
+	var instance = explosion.instantiate()
+	add_child(instance)
+	instance.z_index = 10
+	instance.global_position = card.global_position 
+	instance.boom()
+	await get_tree().create_timer(0.2).timeout
+	ancor.visible = true
+	is_returned = true
 
 func _process(delta):
-	if can_drag:
-		#$Card.global_position = get_global_mouse_position()
-		#$Card.look_at($CardPoint/AncorPoint.global_position)
+	if can_drag and is_returned:
 		ancor.look_at(get_global_mouse_position())
 		ancor.rotation_degrees = clamp(ancor.rotation_degrees + 90 , -45, 45)
 	else:
@@ -33,22 +54,37 @@ func _process(delta):
 		elif ancor.rotation_degrees < 0:
 			ancor.rotation_degrees = clamp(ancor.rotation_degrees + (velocity * delta),-180,0)
 		
-		#ancor.rotation_degrees = 0
 func _on_card_dragging(is_dragging):
 	can_drag = is_dragging
 
 func _on_no_area_entered(area):
 	if area is Card:
 		area.setText(Card.TextLabel.NO)
+		incomeBar.valueHint_show(CardHandler.currentCard.noIncome)
+		educationBar.valueHint_show(CardHandler.currentCard.noEducation)
+		healthBar.valueHint_show(CardHandler.currentCard.noHealth)
+		socialBar.valueHint_show(CardHandler.currentCard.noSocial)
 
 func _on_no_area_exited(area):
 	if area is Card and area.textSelected == Card.TextLabel.NO:
 		area.setText(Card.TextLabel.EMPTY)
+		incomeBar.valueHint_hide()
+		educationBar.valueHint_hide()
+		healthBar.valueHint_hide()
+		socialBar.valueHint_hide()
 
 func _on_yes_area_entered(area):
 	if area is Card:
 		area.setText(Card.TextLabel.YES)
+		incomeBar.valueHint_show(CardHandler.currentCard.yesIncome)
+		educationBar.valueHint_show(CardHandler.currentCard.yesEducation)
+		healthBar.valueHint_show(CardHandler.currentCard.yesHealth)
+		socialBar.valueHint_show(CardHandler.currentCard.yesSocial)
 
 func _on_yes_area_exited(area):
 	if area is Card and area.textSelected == Card.TextLabel.YES:
 		area.setText(Card.TextLabel.EMPTY)
+		incomeBar.valueHint_hide()
+		educationBar.valueHint_hide()
+		healthBar.valueHint_hide()
+		socialBar.valueHint_hide()

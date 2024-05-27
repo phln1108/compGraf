@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://cebdwaibf5isv"]
+[gd_scene load_steps=10 format=3 uid="uid://cebdwaibf5isv"]
 
 [ext_resource type="Script" path="res://Scenes/Map/map.gd" id="1_d38tv"]
 [ext_resource type="PackedScene" uid="uid://clfepkedxjswg" path="res://Scenes/Card/card.tscn" id="1_tinaq"]
 [ext_resource type="Texture2D" uid="uid://dgo2gqhau23vo" path="res://assets/Backround.jpg" id="2_lrgqk"]
-[ext_resource type="PackedScene" uid="uid://3jff72gvcgju" path="res://Scenes/Bar/bar.tscn" id="4_k6op0"]
 [ext_resource type="Texture2D" uid="uid://e8t1d34x1rhu" path="res://assets/wallet.png" id="4_ygpce"]
 [ext_resource type="Texture2D" uid="uid://b6tss4l4qp55o" path="res://assets/education.png" id="5_n6oij"]
 [ext_resource type="Texture2D" uid="uid://bxguj0m3doe7k" path="res://assets/cardiogram.png" id="6_uxo22"]
@@ -67,41 +66,69 @@ shape = SubResource("RectangleShape2D_wa8ah")
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 448.0
 offset_right = 704.0
-offset_bottom = 120.0
+offset_bottom = 104.0
 mouse_filter = 2
 color = Color(0.309804, 0.309804, 0.309804, 1)
 
-[node name="incomeBar" parent="ColorRect" instance=ExtResource("4_k6op0")]
-layout_mode = 1
+[node name="incomeIcon" type="Sprite2D" parent="ColorRect"]
+position = Vector2(44, 20)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("4_ygpce")
+
+[node name="IncomeBar" type="ProgressBar" parent="ColorRect"]
+layout_mode = 0
 offset_left = 32.0
-offset_top = 8.0
-offset_right = 50.624
-offset_bottom = 91.24
-icon = ExtResource("4_ygpce")
+offset_top = 40.0
+offset_right = 56.0
+offset_bottom = 96.0
+mouse_filter = 2
+value = 50.0
+fill_mode = 3
 
-[node name="educationBar" parent="ColorRect" instance=ExtResource("4_k6op0")]
-layout_mode = 1
+[node name="educationIcon" type="Sprite2D" parent="ColorRect"]
+position = Vector2(100, 20)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("5_n6oij")
+
+[node name="EducationBar" type="ProgressBar" parent="ColorRect"]
+layout_mode = 0
 offset_left = 88.0
-offset_top = 8.0
-offset_right = 106.624
-offset_bottom = 91.24
-icon = ExtResource("5_n6oij")
+offset_top = 40.0
+offset_right = 112.0
+offset_bottom = 96.0
+mouse_filter = 2
+value = 50.0
+fill_mode = 3
 
-[node name="healthBar" parent="ColorRect" instance=ExtResource("4_k6op0")]
-layout_mode = 1
+[node name="HealthIcon" type="Sprite2D" parent="ColorRect"]
+position = Vector2(156, 20)
+scale = Vector2(0.09375, 0.09375)
+texture = ExtResource("6_uxo22")
+
+[node name="HealthBar" type="ProgressBar" parent="ColorRect"]
+layout_mode = 0
 offset_left = 144.0
-offset_top = 8.0
-offset_right = 162.624
-offset_bottom = 91.24
-icon = ExtResource("6_uxo22")
+offset_top = 40.0
+offset_right = 168.0
+offset_bottom = 96.0
+mouse_filter = 2
+value = 50.0
+fill_mode = 3
 
-[node name="socialBar" parent="ColorRect" instance=ExtResource("4_k6op0")]
-layout_mode = 1
+[node name="SocialIcon" type="Sprite2D" parent="ColorRect"]
+position = Vector2(212, 20)
+scale = Vector2(0.0937498, 0.09375)
+texture = ExtResource("7_m3y76")
+
+[node name="SocialBar" type="ProgressBar" parent="ColorRect"]
+layout_mode = 0
 offset_left = 200.0
-offset_top = 8.0
-offset_right = 218.624
-offset_bottom = 91.24
-icon = ExtResource("7_m3y76")
+offset_top = 40.0
+offset_right = 224.0
+offset_bottom = 96.0
+mouse_filter = 2
+value = 50.0
+fill_mode = 3
 
 [connection signal="dragging" from="CardMenu/AncorPoint/Card" to="." method="_on_card_dragging"]
 [connection signal="area_entered" from="CardMenu/YesArea" to="." method="_on_yes_area_entered"]
