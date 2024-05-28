@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Card/card.gd" id="1_d41f0"]
 [ext_resource type="Resource" uid="uid://bi38dmp5srs6g" path="res://Resources/Cards/horaExtra.tres" id="2_8pcvk"]
 [ext_resource type="Texture2D" uid="uid://k0l38bh87g25" path="res://assets/cardBack.png" id="2_w0d1g"]
-[ext_resource type="Texture2D" uid="uid://e8t1d34x1rhu" path="res://assets/wallet.png" id="3_va4vm"]
+[ext_resource type="Texture2D" uid="uid://e8t1d34x1rhu" path="res://assets/cardIcons/wallet.png" id="3_va4vm"]
 [ext_resource type="LabelSettings" uid="uid://bpk0dljibd7by" path="res://Resources/others/labelSettings.tres" id="5_yw50m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8g6l"]

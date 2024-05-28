@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var explosion =  preload("res://Scenes/Explosion/explosion.tscn")
 
@@ -88,3 +88,7 @@ func _on_yes_area_exited(area):
 		educationBar.valueHint_hide()
 		healthBar.valueHint_hide()
 		socialBar.valueHint_hide()
+
+
+func _on_config_button_pressed():
+	PauseMenu.Pauseshow()

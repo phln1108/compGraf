@@ -1,0 +1,282 @@
+[
+{
+"text": "Seus amigos te convidam para uma viagem no fim de semana, mas você tem uma prova importante na segunda-feira.",
+"noMsg": "Recusar a viagem",
+"yesMsg": "Aceitar a viagem",
+"yesValues": [0, -30, 20, 10],
+"noValues": [10, 0, -10, 5]
+},
+{
+"text": "Você encontrou um emprego de meio período que paga bem, mas vai consumir parte do seu tempo de estudo.",
+"noMsg": "Não aceitar o emprego",
+"yesMsg": "Aceitar o emprego",
+"yesValues": [-10, 30, 0, -5],
+"noValues": [10, 0, 0, 5]
+},
+{
+"text": "A academia está oferecendo um desconto para novos membros. Isso ajudaria sua saúde, mas custa dinheiro.",
+"noMsg": "Não se inscrever na academia",
+"yesMsg": "Inscrever-se na academia",
+"yesValues": [0, -10, 0, 20],
+"noValues": [0, 0, 0, -5]
+},
+{
+"text": "Uma nova série interessante acabou de ser lançada, mas assistir pode tomar tempo dos estudos.",
+"noMsg": "Não assistir a série",
+"yesMsg": "Assistir a série",
+"yesValues": [-10, 0, 20, -5],
+"noValues": [10, 0, -10, 5]
+},
+{
+"text": "Um colega oferece ajuda com uma matéria difícil, mas ele cobra por hora.",
+"noMsg": "Recusar ajuda paga",
+"yesMsg": "Aceitar ajuda paga",
+"yesValues": [15, -10, 0, 5],
+"noValues": [-5, 0, 0, 0]
+},
+{
+"text": "Você pode se voluntariar em um evento social, o que traz satisfação, mas ocupa tempo e pode custar algum dinheiro.",
+"noMsg": "Não se voluntariar",
+"yesMsg": "Se voluntariar",
+"yesValues": [5, -5, 15, 0],
+"noValues": [0, 0, -5, 0]
+},
+{
+"text": "Um seminário interessante está acontecendo na sua universidade. É gratuito, mas toma tempo dos estudos.",
+"noMsg": "Não participar do seminário",
+"yesMsg": "Participar do seminário",
+"yesValues": [10, 0, 0, -5],
+"noValues": [-5, 0, 0, 5]
+},
+{
+"text": "Você pode comprar uma bicicleta para se exercitar e economizar no transporte, mas custa dinheiro.",
+"noMsg": "Não comprar a bicicleta",
+"yesMsg": "Comprar a bicicleta",
+"yesValues": [0, -20, 0, 15],
+"noValues": [0, 0, 0, -5]
+},
+{
+"text": "Sua faculdade está organizando uma festa, ótima oportunidade para relaxar, mas pode atrapalhar os estudos.",
+"noMsg": "Não ir à festa",
+"yesMsg": "Ir à festa",
+"yesValues": [-10, -10, 25, 0],
+"noValues": [10, 0, -10, 5]
+},
+{
+"text": "Você encontrou um curso online gratuito, mas ele consome tempo significativo.",
+"noMsg": "Não fazer o curso online",
+"yesMsg": "Fazer o curso online",
+"yesValues": [20, 0, 0, -10],
+"noValues": [-5, 0, 0, 5]
+},
+{
+"text": "Seu colega de quarto sugere dividir a assinatura de um serviço de streaming.",
+"noMsg": "Não dividir a assinatura",
+"yesMsg": "Dividir a assinatura",
+"yesValues": [0, -5, 20, 0],
+"noValues": [0, 0, -10, 0]
+},
+{
+"text": "Você pode comprar materiais de estudo avançados que ajudam muito, mas são caros.",
+"noMsg": "Não comprar os materiais",
+"yesMsg": "Comprar os materiais",
+"yesValues": [20, -20, 0, 0],
+"noValues": [0, 0, 0, 0]
+},
+{
+"text": "Um novo grupo de estudo está se formando. Participar pode melhorar suas notas, mas consome tempo de lazer.",
+"noMsg": "Não participar do grupo",
+"yesMsg": "Participar do grupo",
+"yesValues": [15, 0, -10, 0],
+"noValues": [-5, 0, 0, 0]
+},
+{
+"text": "Uma nova cafeteria abriu perto da faculdade, ótima para relaxar, mas pode custar dinheiro.",
+"noMsg": "Não frequentar a cafeteria",
+"yesMsg": "Frequentar a cafeteria",
+"yesValues": [0, -10, 15, 0],
+"noValues": [0, 0, -5, 0]
+},
+{
+"text": "Você tem a chance de participar de uma pesquisa que pode melhorar seu currículo, mas é trabalho extra.",
+"noMsg": "Não participar da pesquisa",
+"yesMsg": "Participar da pesquisa",
+"yesValues": [15, 0, -5, -10],
+"noValues": [0, 0, 0, 5]
+},
+{
+"text": "Um festival cultural está acontecendo na cidade. Ótimo para lazer, mas pode atrapalhar os estudos.",
+"noMsg": "Não ir ao festival",
+"yesMsg": "Ir ao festival",
+"yesValues": [-10, -10, 20, 5],
+"noValues": [10, 0, -10, 0]
+},
+{
+"text": "Você pode aprender a cozinhar, melhorando sua alimentação e economia, mas requer tempo.",
+"noMsg": "Não aprender a cozinhar",
+"yesMsg": "Aprender a cozinhar",
+"yesValues": [0, 10, 0, 15],
+"noValues": [0, 0, 0, -5]
+},
+{
+"text": "Uma palestra com um especialista renomado está acontecendo, mas coincide com um evento social importante.",
+"noMsg": "Não ir à palestra",
+"yesMsg": "Ir à palestra",
+"yesValues": [10, 0, -10, 0],
+"noValues": [-5, 0, 5, 0]
+},
+{
+"text": "Uma oportunidade de estágio surgiu, ótima para o currículo, mas consome muito tempo.",
+"noMsg": "Não aceitar o estágio",
+"yesMsg": "Aceitar o estágio",
+"yesValues": [20, 20, -10, -10],
+"noValues": [0, 0, 0, 5]
+},
+{
+"text": "Você pode adotar um animal de estimação. Traz alegria, mas exige tempo e dinheiro.",
+"noMsg": "Não adotar o animal",
+"yesMsg": "Adotar o animal",
+"yesValues": [0, -15, 20, 10],
+"noValues": [0, 0, -10, 0]
+},
+{
+"text": "Seu projeto de pesquisa está exigindo mais tempo do que você imaginava, afetando suas outras atividades.",
+"noMsg": "Continuar com o projeto de pesquisa",
+"yesMsg": "Abandonar o projeto de pesquisa",
+"yesValues": [20, 0, -20, -10],
+"noValues": [-10, 0, 10, 5]
+},
+{
+"text": "O conserto do seu laptop está atrasado, você pode alugar um temporariamente ou esperar.",
+"noMsg": "Esperar pelo conserto",
+"yesMsg": "Alugar um laptop temporário",
+"yesValues": [10, -15, 0, 0],
+"noValues": [-10, 0, 0, 0]
+},
+{
+"text": "O clube esportivo está organizando um torneio. Participar melhora suas habilidades e saúde, mas consome tempo.",
+"noMsg": "Não participar do torneio",
+"yesMsg": "Participar do torneio",
+"yesValues": [0, 0, 20, 15],
+"noValues": [0, 0, -10, -5]
+},
+{
+"text": "Seu amigo precisa de mais ajuda financeira para uma segunda fase do tratamento médico.",
+"noMsg": "Não ajudar novamente",
+"yesMsg": "Ajudar novamente",
+"yesValues": [0, -20, 0, 10],
+"noValues": [0, 0, 0, -5]
+},
+{
+"text": "O curso opcional se mostrou mais difícil do que o esperado, exigindo ainda mais dedicação.",
+"noMsg": "Continuar com o curso",
+"yesMsg": "Abandonar o curso",
+"yesValues": [20, 0, 0, -10],
+"noValues": [-5, 0, 10, 5]
+},
+{
+"text": "Você venceu o concurso cultural e ganhou um prêmio em dinheiro.",
+"noMsg": "Recusar o prêmio",
+"yesMsg": "Aceitar o prêmio",
+"yesValues": [0, 30, 0, 5],
+"noValues": [0, 0, 0, 0]
+},
+{
+"text": "Sua viagem com a família está prestes a começar, mas surgiu um trabalho importante na faculdade.",
+"noMsg": "Ir na viagem",
+"yesMsg": "Ficar e fazer o trabalho",
+"yesValues": [-10, -20, 20, 5],
+"noValues": [20, 0, -10, 0]
+},
+{
+"text": "Você foi pré-selecionado para a bolsa de estudos, mas precisa passar por uma entrevista difícil.",
+"noMsg": "Não fazer a entrevista",
+"yesMsg": "Fazer a entrevista",
+"yesValues": [30, 0, -10, -5],
+"noValues": [-5, 0, 0, 5]
+},
+{
+"text": "O restaurante saudável está oferecendo um plano de assinatura mensal com desconto.",
+"noMsg": "Não assinar o plano",
+"yesMsg": "Assinar o plano",
+"yesValues": [0, -15, 5, 25],
+"noValues": [0, 0, 0, -5]
+},
+{
+"text": "O projeto voluntário está te dando reconhecimento na faculdade, mas está exaustivo.",
+"noMsg": "Continuar no projeto",
+"yesMsg": "Sair do projeto",
+"yesValues": [20, 0, -15, 0],
+"noValues": [0, 0, 10, 5]
+},
+{
+"text": "Você foi convidado para apresentar seu trabalho do projeto de pesquisa em uma conferência.",
+"noMsg": "Não apresentar na conferência",
+"yesMsg": "Apresentar na conferência",
+"yesValues": [30, 0, -10, -10],
+"noValues": [-10, 0, 0, 5]
+},
+{
+"text": "O aluguel do laptop temporário está aumentando devido à alta demanda.",
+"noMsg": "Devolver o laptop temporário",
+"yesMsg": "Continuar com o aluguel",
+"yesValues": [10, -20, 0, 0],
+"noValues": [-10, 0, 0, 5]
+},
+{
+"text": "Você ganhou o torneio do clube esportivo, mas está se sentindo exausto.",
+"noMsg": "Continuar treinando",
+"yesMsg": "Tirar uma pausa",
+"yesValues": [0, 0, 0, 10],
+"noValues": [0, 0, 10, -5]
+},
+{
+"text": "Seu amigo conseguiu pagar o tratamento, mas agora precisa de ajuda com suas contas diárias.",
+"noMsg": "Não ajudar mais",
+"yesMsg": "Ajudar com as contas diárias",
+"yesValues": [0, -20, 0, 10],
+"noValues": [0, 0, 0, -5]
+},
+{
+"text": "Seu curso opcional está tendo uma avaliação final que vale uma grande parte da nota.",
+"noMsg": "Não fazer a avaliação",
+"yesMsg": "Fazer a avaliação",
+"yesValues": [30, 0, 0, -10],
+"noValues": [-10, 0, 10, 5]
+},
+{
+"text": "O prêmio do concurso cultural pode ser usado para financiar um projeto pessoal.",
+"noMsg": "Guardar o dinheiro",
+"yesMsg": "Investir no projeto pessoal",
+"yesValues": [0, 0, 0, 20],
+"noValues": [0, 30, 0, 0]
+},
+{
+"text": "Sua viagem com a família foi adiada, dando-lhe tempo para o trabalho importante na faculdade.",
+"noMsg": "Aproveitar o tempo para descansar",
+"yesMsg": "Aproveitar o tempo para trabalhar",
+"yesValues": [20, 0, 0, 5],
+"noValues": [10, 0, 0, 0]
+},
+{
+"text": "Você passou na entrevista para a bolsa de estudos e precisa decidir como equilibrar o tempo extra necessário.",
+"noMsg": "Recusar a bolsa",
+"yesMsg": "Aceitar a bolsa",
+"yesValues": [40, 0, -10, -10],
+"noValues": [-5, 0, 10, 5]
+},
+{
+"text": "O plano de assinatura do restaurante saudável está trazendo benefícios visíveis à sua saúde.",
+"noMsg": "Cancelar o plano",
+"yesMsg": "Continuar com o plano",
+"yesValues": [0, -10, 10, 30],
+"noValues": [0, 0, 0, -5]
+},
+{
+"text": "Seu reconhecimento no projeto voluntário está abrindo portas para novas oportunidades.",
+"noMsg": "Não explorar as novas oportunidades",
+"yesMsg": "Explorar as novas oportunidades",
+"yesValues": [20, 0, -15, 0],
+"noValues": [0, 0, 10, 5]
+}
+]

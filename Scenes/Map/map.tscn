@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://cebdwaibf5isv"]
+[gd_scene load_steps=12 format=3 uid="uid://cebdwaibf5isv"]
 
 [ext_resource type="Script" path="res://Scenes/Map/map.gd" id="1_d38tv"]
 [ext_resource type="PackedScene" uid="uid://clfepkedxjswg" path="res://Scenes/Card/card.tscn" id="1_tinaq"]
 [ext_resource type="Texture2D" uid="uid://dgo2gqhau23vo" path="res://assets/Backround.jpg" id="2_lrgqk"]
 [ext_resource type="PackedScene" uid="uid://3jff72gvcgju" path="res://Scenes/Bar/bar.tscn" id="4_k6op0"]
-[ext_resource type="Texture2D" uid="uid://e8t1d34x1rhu" path="res://assets/wallet.png" id="4_ygpce"]
-[ext_resource type="Texture2D" uid="uid://b6tss4l4qp55o" path="res://assets/education.png" id="5_n6oij"]
-[ext_resource type="Texture2D" uid="uid://bxguj0m3doe7k" path="res://assets/cardiogram.png" id="6_uxo22"]
-[ext_resource type="Texture2D" uid="uid://w2015ctdy3yx" path="res://assets/chat.png" id="7_m3y76"]
+[ext_resource type="Texture2D" uid="uid://e8t1d34x1rhu" path="res://assets/cardIcons/wallet.png" id="4_ygpce"]
+[ext_resource type="Texture2D" uid="uid://b6tss4l4qp55o" path="res://assets/cardIcons/education.png" id="5_n6oij"]
+[ext_resource type="Texture2D" uid="uid://bxguj0m3doe7k" path="res://assets/cardIcons/cardiogram.png" id="6_uxo22"]
+[ext_resource type="Texture2D" uid="uid://w2015ctdy3yx" path="res://assets/cardIcons/chat.png" id="7_m3y76"]
+[ext_resource type="Texture2D" uid="uid://cd63kx5ylglx7" path="res://assets/gear.png" id="9_yo3ki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2oxu"]
 size = Vector2(64, 64)
@@ -15,10 +16,15 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa8ah"]
 size = Vector2(64, 64)
 
-[node name="Map" type="Node2D"]
+[node name="Map" type="Control"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
 script = ExtResource("1_d38tv")
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("2_lrgqk")
@@ -26,6 +32,7 @@ expand_mode = 1
 
 [node name="Background" type="ColorRect" parent="."]
 visible = false
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 mouse_filter = 2
@@ -43,7 +50,7 @@ offset_left = 448.0
 offset_top = 48.0
 offset_right = 704.0
 offset_bottom = 696.0
-mouse_filter = 2
+mouse_filter = 1
 color = Color(0.141176, 0.141176, 0.141176, 0.494118)
 
 [node name="AncorPoint" type="Marker2D" parent="CardMenu"]
@@ -65,6 +72,7 @@ position = Vector2(384, 336)
 shape = SubResource("RectangleShape2D_wa8ah")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_left = 448.0
 offset_right = 704.0
 offset_bottom = 120.0
@@ -103,8 +111,18 @@ offset_right = 218.624
 offset_bottom = 91.24
 icon = ExtResource("7_m3y76")
 
+[node name="configButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1116.0
+offset_right = 1152.0
+offset_bottom = 36.0
+icon = ExtResource("9_yo3ki")
+icon_alignment = 1
+expand_icon = true
+
 [connection signal="dragging" from="CardMenu/AncorPoint/Card" to="." method="_on_card_dragging"]
 [connection signal="area_entered" from="CardMenu/YesArea" to="." method="_on_yes_area_entered"]
 [connection signal="area_exited" from="CardMenu/YesArea" to="." method="_on_yes_area_exited"]
 [connection signal="area_entered" from="CardMenu/NoArea" to="." method="_on_no_area_entered"]
 [connection signal="area_exited" from="CardMenu/NoArea" to="." method="_on_no_area_exited"]
+[connection signal="pressed" from="configButton" to="." method="_on_config_button_pressed"]
