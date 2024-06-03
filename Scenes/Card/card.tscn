@@ -1,17 +1,56 @@
-[gd_scene load_steps=7 format=3 uid="uid://clfepkedxjswg"]
+[gd_scene load_steps=8 format=3 uid="uid://clfepkedxjswg"]
 
 [ext_resource type="Script" path="res://Scenes/Card/card.gd" id="1_d41f0"]
-[ext_resource type="Resource" uid="uid://bi38dmp5srs6g" path="res://Resources/Cards/horaExtra.tres" id="2_8pcvk"]
 [ext_resource type="Texture2D" uid="uid://k0l38bh87g25" path="res://assets/cardBack.png" id="2_w0d1g"]
 [ext_resource type="Texture2D" uid="uid://e8t1d34x1rhu" path="res://assets/cardIcons/wallet.png" id="3_va4vm"]
 [ext_resource type="LabelSettings" uid="uid://bpk0dljibd7by" path="res://Resources/others/labelSettings.tres" id="5_yw50m"]
+
+[sub_resource type="GDScript" id="GDScript_btq4w"]
+script/source = "@tool
+extends Resource
+class_name CardResource
+
+@export var sprite: Texture
+
+@export var text: String
+@export var noMsg: String
+@export var yesMsg: String
+
+@export var yesEducation: float = 0
+@export var yesIncome:    float = 0
+@export var yesSocial:    float = 0
+@export var yesHealth:    float = 0
+	
+@export var noEducation: float = 0
+@export var noIncome:    float = 0
+@export var noSocial:    float = 0
+@export var noHealth:    float = 0
+
+@export var yesPath: Array[CardResource] = []
+"
+
+[sub_resource type="Resource" id="Resource_0h657"]
+script = SubResource("GDScript_btq4w")
+sprite = ExtResource("3_va4vm")
+text = "Você tem que passar a noite resolvendo um problema no trabalho, mas seu chefe irá lhe recompensar por isso"
+noMsg = "Ir dormir"
+yesMsg = "Fazer Hora extra"
+yesEducation = 0.0
+yesIncome = 20.0
+yesSocial = 0.0
+yesHealth = -20.0
+noEducation = 0.0
+noIncome = 0.0
+noSocial = 0.0
+noHealth = 10.0
+yesPath = Array[SubResource("GDScript_btq4w")]([])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8g6l"]
 size = Vector2(176, 144)
 
 [node name="Card" type="Area2D"]
 script = ExtResource("1_d41f0")
-cardResource = ExtResource("2_8pcvk")
+cardResource = SubResource("Resource_0h657")
 
 [node name="CardBack" type="Sprite2D" parent="."]
 position = Vector2(-1.52588e-05, -4.58956e-06)
@@ -24,6 +63,7 @@ offset_top = -93.0
 offset_right = 88.0
 offset_bottom = 27.0
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="CardContent" type="Sprite2D" parent="."]
 position = Vector2(0, -40)
@@ -44,6 +84,7 @@ text = "opa"
 label_settings = ExtResource("5_yw50m")
 horizontal_alignment = 1
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="ResponseLabel" type="Label" parent="."]
 offset_left = -104.0
@@ -55,6 +96,7 @@ label_settings = ExtResource("5_yw50m")
 horizontal_alignment = 1
 vertical_alignment = 2
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

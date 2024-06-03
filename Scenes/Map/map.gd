@@ -19,11 +19,11 @@ var velocity = 450
 func _ready():
 	SignalBus.connect("cardSideChosed",on_card_chose_side)
 
-func on_card_chose_side(textSelected,education,health,income,social):
-	incomeBar.addValue(income)
-	educationBar.addValue(education)
-	healthBar.addValue(health)
-	socialBar.addValue(social)
+func on_card_chose_side(textSelected,values):
+	incomeBar.addValue(values[0])
+	educationBar.addValue(values[1])
+	healthBar.addValue(values[2])
+	socialBar.addValue(values[3])
 	
 	var instance = explosion.instantiate()
 	add_child(instance)
@@ -60,10 +60,10 @@ func _on_card_dragging(is_dragging):
 func _on_no_area_entered(area):
 	if area is Card:
 		area.setText(Card.TextLabel.NO)
-		incomeBar.valueHint_show(CardHandler.currentCard.noIncome)
-		educationBar.valueHint_show(CardHandler.currentCard.noEducation)
-		healthBar.valueHint_show(CardHandler.currentCard.noHealth)
-		socialBar.valueHint_show(CardHandler.currentCard.noSocial)
+		incomeBar.valueHint_show(CardHandler.currentCard.noValues[0])
+		educationBar.valueHint_show(CardHandler.currentCard.noValues[1])
+		healthBar.valueHint_show(CardHandler.currentCard.noValues[2])
+		socialBar.valueHint_show(CardHandler.currentCard.noValues[3])
 
 func _on_no_area_exited(area):
 	if area is Card and area.textSelected == Card.TextLabel.NO:
@@ -76,10 +76,10 @@ func _on_no_area_exited(area):
 func _on_yes_area_entered(area):
 	if area is Card:
 		area.setText(Card.TextLabel.YES)
-		incomeBar.valueHint_show(CardHandler.currentCard.yesIncome)
-		educationBar.valueHint_show(CardHandler.currentCard.yesEducation)
-		healthBar.valueHint_show(CardHandler.currentCard.yesHealth)
-		socialBar.valueHint_show(CardHandler.currentCard.yesSocial)
+		incomeBar.valueHint_show(CardHandler.currentCard.yesValues[0])
+		educationBar.valueHint_show(CardHandler.currentCard.yesValues[1])
+		healthBar.valueHint_show(CardHandler.currentCard.yesValues[2])
+		socialBar.valueHint_show(CardHandler.currentCard.yesValues[3])
 
 func _on_yes_area_exited(area):
 	if area is Card and area.textSelected == Card.TextLabel.YES:

@@ -1,8 +1,8 @@
 extends Node
 
-var cards: Array[CardResource]
+var cards: Array[JsonCard]
 
-var currentCard: CardResource
+var currentCard: JsonCard
 
 func _ready() -> void:
 	var dataFile = FileAccess.open("res://cards.json",FileAccess.READ)
@@ -19,25 +19,21 @@ func _ready() -> void:
 		file_name = cardsFolder.get_next()
 		
 	for cardJson in parsed:
-		var new_card: CardResource = CardResource.new()
+		var new_card: JsonCard = JsonCard.new()
 		
 		var random_index = randi() % files.size()
 		new_card.sprite = load(files[random_index])
 		new_card.text = cardJson["text"]
 		new_card.yesMsg = cardJson["yesMsg"]
 		new_card.noMsg = cardJson["noMsg"]
-		new_card.yesEducation = cardJson["yesValues"][0]
-		new_card.yesIncome = cardJson["yesValues"][1]
-		new_card.yesSocial = cardJson["yesValues"][2]
-		new_card.yesHealth = cardJson["yesValues"][3]
+		new_card.yesValues = []
+		new_card.noValues= []
+		for i in range(4):
+			new_card.yesValues.append(cardJson["yesValues"][i])
+			new_card.noValues.append(cardJson["noValues"][i])
 		
-		new_card.noEducation = cardJson["noValues"][0]
-		new_card.noIncome = cardJson["noValues"][1]
-		new_card.noSocial = cardJson["noValues"][2]
-		new_card.noHealth = cardJson["noValues"][3]
-	
 		cards.append(new_card)
 
-func nex_card() -> CardResource:
+func nex_card() -> JsonCard:
 	currentCard = cards.pop_front()
 	return currentCard

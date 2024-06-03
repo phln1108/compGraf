@@ -1,7 +1,7 @@
 extends Node2D
 class_name Card
 
-@export var cardResource : CardResource = null
+@export var cardResource : JsonCard = null
 
 @onready var contentLabel = $ContentLabel
 @onready var cardContent = $CardContent
@@ -16,14 +16,14 @@ enum TextLabel{EMPTY,YES,NO}
 
 signal dragging
 
-func _ready():
+func _ready()-> void:
 	setText(TextLabel.EMPTY)
 	cardResource = CardHandler.nex_card()
 	newCard()
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(delta)-> void:
 	if draggable:
 		if Input.is_action_pressed("click"):
 			#global_position = get_global_mouse_position()
@@ -34,28 +34,17 @@ func _process(delta):
 			emit_signal("dragging",is_dragging)
 			if  not textSelected == TextLabel.EMPTY:
 				if textSelected == TextLabel.YES:
-					SignalBus.emit_signal(	"cardSideChosed",
-											textSelected,
-											cardResource.yesEducation,
-											cardResource.yesHealth,
-											cardResource.yesIncome,
-											cardResource.yesSocial
-					)
+					SignalBus.emit_signal(	"cardSideChosed",textSelected,cardResource.yesValues)
 				else :
-					SignalBus.emit_signal(	"cardSideChosed",
-											textSelected,
-											cardResource.noEducation,
-											cardResource.noHealth,
-											cardResource.noIncome,
-											cardResource.noSocial
-					)
+					SignalBus.emit_signal(	"cardSideChosed",textSelected,cardResource.noValues)
+					
 				var new_cardResource = CardHandler.nex_card()
 				if !new_cardResource:
 					return
 				cardResource = new_cardResource
 				newCard()
 	
-func setText(textlabel: TextLabel):
+func setText(textlabel: TextLabel) -> void:
 	textSelected = textlabel
 	match(textlabel):
 		TextLabel.EMPTY:
@@ -65,12 +54,12 @@ func setText(textlabel: TextLabel):
 		TextLabel.NO:
 			responseLabel.text = cardResource.noMsg
 
-func newCard():
+func newCard()-> void:
 	contentLabel.text = cardResource.text
 	cardContent.texture = cardResource.sprite
 
-func _on_mouse_entered():
+func _on_mouse_entered()-> void:
 	draggable = true
 	
-func _on_mouse_exited():
+func _on_mouse_exited()-> void:
 	draggable = is_dragging 
