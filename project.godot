@@ -21,6 +21,7 @@ CardHandler="*res://singletons/CardHandler.gd"
 SignalBus="*res://singletons/SignalBus.gd"
 Achievements="*res://singletons/Achievements.gd"
 PauseMenu="*res://Scenes/PauseMenu/PauseMenu.tscn"
+SoundManager="*res://singletons/SoundManager/SoundManager.tscn"
 
 [debug]
 

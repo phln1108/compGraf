@@ -1,4 +1,5 @@
 extends Control
+class_name Map
 
 var explosion =  preload("res://Scenes/Explosion/explosion.tscn")
 
@@ -91,4 +92,4 @@ func _on_yes_area_exited(area):
 
 
 func _on_config_button_pressed():
-	PauseMenu.Pauseshow()
+	PauseMenu.Pauseshow(self)
