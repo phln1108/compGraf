@@ -57,7 +57,7 @@ color = Color(0.141176, 0.141176, 0.141176, 0.494118)
 position = Vector2(576, 480)
 
 [node name="Card" parent="CardMenu/AncorPoint" instance=ExtResource("1_tinaq")]
-position = Vector2(0, -96)
+position = Vector2(0, 4)
 
 [node name="YesArea" type="Area2D" parent="CardMenu"]
 
@@ -94,6 +94,7 @@ offset_top = 8.0
 offset_right = 106.624
 offset_bottom = 91.24
 icon = ExtResource("5_n6oij")
+id = 1
 
 [node name="healthBar" parent="ColorRect" instance=ExtResource("4_k6op0")]
 layout_mode = 1
@@ -102,6 +103,7 @@ offset_top = 8.0
 offset_right = 162.624
 offset_bottom = 91.24
 icon = ExtResource("6_uxo22")
+id = 2
 
 [node name="socialBar" parent="ColorRect" instance=ExtResource("4_k6op0")]
 layout_mode = 1
@@ -110,6 +112,7 @@ offset_top = 8.0
 offset_right = 218.624
 offset_bottom = 91.24
 icon = ExtResource("7_m3y76")
+id = 3
 
 [node name="configButton" type="Button" parent="."]
 layout_mode = 0

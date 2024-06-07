@@ -9,6 +9,7 @@ class_name Card
 
 var draggable: bool = false
 var is_dragging: bool = false
+var inside: bool = false
 
 var textSelected: TextLabel = TextLabel.EMPTY
 
@@ -25,13 +26,14 @@ func _ready()-> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta)-> void:
 	if draggable:
-		if Input.is_action_pressed("click"):
-			#global_position = get_global_mouse_position()
+		if Input.get_action_strength("click") and draggable:
+			global_position = get_global_mouse_position()
 			is_dragging = true
-			emit_signal("dragging",is_dragging)
-		elif  Input.is_action_just_released("click") and is_dragging:
+			dragging.emit(is_dragging)
+		elif not Input.get_action_strength("click") and is_dragging:
+			draggable = inside
 			is_dragging = false
-			emit_signal("dragging",is_dragging)
+			dragging.emit(is_dragging)
 			if  not textSelected == TextLabel.EMPTY:
 				if textSelected == TextLabel.YES:
 					SignalBus.emit_signal(	"cardSideChosed",textSelected,cardResource.yesValues)
@@ -59,7 +61,9 @@ func newCard()-> void:
 	cardContent.texture = cardResource.sprite
 
 func _on_mouse_entered()-> void:
+	inside = true
 	draggable = true
 	
 func _on_mouse_exited()-> void:
-	draggable = is_dragging 
+	inside = false
+	draggable =  is_dragging

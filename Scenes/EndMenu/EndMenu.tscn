@@ -1,0 +1,245 @@
+[gd_scene load_steps=7 format=3 uid="uid://csy83lr6qln5t"]
+
+[ext_resource type="Script" path="res://Scenes/EndMenu/EndMenu.gd" id="1_qnpuk"]
+[ext_resource type="Texture2D" uid="uid://c18qap43dhupd" path="res://assets/1.png" id="2_b8d2u"]
+[ext_resource type="Theme" uid="uid://bbt5up14ymi33" path="res://themes/buttonTheme.tres" id="3_6t3ff"]
+[ext_resource type="LabelSettings" uid="uid://dwngcengptodr" path="res://Resources/others/AchievementsLabel.tres" id="4_tftjc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ni78p"]
+font_size = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_wn1hg"]
+font_size = 22
+
+[node name="EndMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qnpuk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_b8d2u")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 192.0
+grow_horizontal = 2
+theme = ExtResource("3_6t3ff")
+text = "Fim do Jogo"
+label_settings = SubResource("LabelSettings_ni78p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="span" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.493
+anchor_right = 0.5
+anchor_bottom = 0.042
+offset_left = -199.936
+offset_top = 144.0
+offset_right = 210.0
+offset_bottom = 175.784
+grow_horizontal = 2
+theme = ExtResource("3_6t3ff")
+text = "Você deixou a barra de Saúde cair Demais"
+label_settings = SubResource("LabelSettings_wn1hg")
+
+[node name="Card" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.493
+anchor_right = 0.5
+anchor_bottom = 0.042
+offset_left = -223.936
+offset_top = 200.0
+offset_right = 186.0
+offset_bottom = 231.784
+grow_horizontal = 2
+theme = ExtResource("3_6t3ff")
+text = "Cartas:"
+label_settings = SubResource("LabelSettings_wn1hg")
+
+[node name="CardsPLayed" type="Label" parent="Card"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 114.0
+offset_bottom = 71.0
+pivot_offset = Vector2(56, 8)
+theme = ExtResource("3_6t3ff")
+text = "Cartas Jogadas:"
+label_settings = ExtResource("4_tftjc")
+
+[node name="CardPlayedNumber" type="Label" parent="Card/CardsPLayed"]
+layout_mode = 0
+offset_left = 152.0
+offset_right = 266.0
+offset_bottom = 31.0
+theme = ExtResource("3_6t3ff")
+text = "10"
+label_settings = ExtResource("4_tftjc")
+
+[node name="YesPlayed" type="Label" parent="Card"]
+layout_mode = 0
+offset_top = 72.0
+offset_right = 114.0
+offset_bottom = 103.0
+theme = ExtResource("3_6t3ff")
+text = "Cartas Sim:"
+label_settings = ExtResource("4_tftjc")
+
+[node name="YesPlayedNumber" type="Label" parent="Card/YesPlayed"]
+layout_mode = 0
+offset_left = 152.0
+offset_right = 266.0
+offset_bottom = 31.0
+theme = ExtResource("3_6t3ff")
+text = "10
+"
+label_settings = ExtResource("4_tftjc")
+
+[node name="NoPlayed" type="Label" parent="Card"]
+layout_mode = 0
+offset_top = 104.0
+offset_right = 114.0
+offset_bottom = 135.0
+theme = ExtResource("3_6t3ff")
+text = "Cartas Não:"
+label_settings = ExtResource("4_tftjc")
+
+[node name="NoPlayedNumber" type="Label" parent="Card/NoPlayed"]
+layout_mode = 0
+offset_left = 152.0
+offset_right = 266.0
+offset_bottom = 31.0
+theme = ExtResource("3_6t3ff")
+text = "10
+"
+label_settings = ExtResource("4_tftjc")
+
+[node name="Variation" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.493
+anchor_right = 0.5
+anchor_bottom = 0.042
+offset_left = 64.064
+offset_top = 200.0
+offset_right = 474.0
+offset_bottom = 231.784
+grow_horizontal = 2
+theme = ExtResource("3_6t3ff")
+text = "Variação:"
+label_settings = SubResource("LabelSettings_wn1hg")
+
+[node name="InV" type="Label" parent="Variation"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 114.0
+offset_bottom = 71.0
+theme = ExtResource("3_6t3ff")
+text = "Finanças:"
+label_settings = ExtResource("4_tftjc")
+
+[node name="InVNumber" type="Label" parent="Variation/InV"]
+layout_mode = 0
+offset_left = 152.0
+offset_right = 266.0
+offset_bottom = 31.0
+theme = ExtResource("3_6t3ff")
+text = "10"
+label_settings = ExtResource("4_tftjc")
+
+[node name="EdV" type="Label" parent="Variation"]
+layout_mode = 0
+offset_top = 72.0
+offset_right = 114.0
+offset_bottom = 103.0
+theme = ExtResource("3_6t3ff")
+text = "Educação:"
+label_settings = ExtResource("4_tftjc")
+
+[node name="EdVNumber" type="Label" parent="Variation/EdV"]
+layout_mode = 0
+offset_left = 152.0
+offset_right = 266.0
+offset_bottom = 31.0
+theme = ExtResource("3_6t3ff")
+text = "10
+"
+label_settings = ExtResource("4_tftjc")
+
+[node name="HeV" type="Label" parent="Variation"]
+layout_mode = 0
+offset_top = 104.0
+offset_right = 114.0
+offset_bottom = 135.0
+theme = ExtResource("3_6t3ff")
+text = "Saúde:"
+label_settings = ExtResource("4_tftjc")
+
+[node name="HeVNumber" type="Label" parent="Variation/HeV"]
+layout_mode = 0
+offset_left = 152.0
+offset_right = 266.0
+offset_bottom = 31.0
+theme = ExtResource("3_6t3ff")
+text = "10
+"
+label_settings = ExtResource("4_tftjc")
+
+[node name="SoV" type="Label" parent="Variation"]
+layout_mode = 0
+offset_top = 136.0
+offset_right = 114.0
+offset_bottom = 167.0
+theme = ExtResource("3_6t3ff")
+text = "Lazer:"
+label_settings = ExtResource("4_tftjc")
+
+[node name="SoVNumber" type="Label" parent="Variation/SoV"]
+layout_mode = 0
+offset_left = 152.0
+offset_right = 266.0
+offset_bottom = 31.0
+theme = ExtResource("3_6t3ff")
+text = "10
+"
+label_settings = ExtResource("4_tftjc")
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 480.0
+offset_right = 728.0
+offset_bottom = 544.0
+theme = ExtResource("3_6t3ff")
+text = "Menu"
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

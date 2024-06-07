@@ -12,6 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_gfoll")
+id = null
 
 [node name="icon" type="Sprite2D" parent="."]
 position = Vector2(12, 12)

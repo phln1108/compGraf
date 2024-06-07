@@ -5,6 +5,7 @@ o que colocar como chievements
 - 
 
 """
+var loseBar: int = 0
 
 var countCards: int = 0
 
@@ -17,8 +18,10 @@ var increaseValue: Array[float] = [0,0,0,0]
 
 var countTypes: int
 
+
 func _ready() -> void:
 	SignalBus.connect("cardSideChosed",on_card_chose_side)
+	SignalBus.connect("gameEnd",on_game_end)
 	
 	
 func on_card_chose_side(sideChosed: Card.TextLabel ,values: Array[float]) -> void:
@@ -35,6 +38,12 @@ func on_card_chose_side(sideChosed: Card.TextLabel ,values: Array[float]) -> voi
 		else:
 			decreaseValue[i] += values[i]
 		variations[i] += abs(values[i])
+		
+func on_game_end(bar: int) -> void:
+	loseBar = bar
+	get_tree().change_scene_to_file("res://Scenes/EndMenu/EndMenu.tscn")
+	
+	
 	
 	
 	

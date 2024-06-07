@@ -3,6 +3,7 @@ extends Control
 
 @export var icon: Texture
 @export var value: float = 50
+@export var id = 0
 
 @onready var dot = $dot
 @onready var bar = $bar
@@ -29,7 +30,7 @@ func addValue(point: float):
 	value += point
 	bar.value = value
 	if value == 0:
-		SignalBus.emit_signal("gameEnd")
+		SignalBus.emit_signal("gameEnd",id)
 
 func _process(delta):
 	if is_inside_tree() and icon != $icon.texture:
