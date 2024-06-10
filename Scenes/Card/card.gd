@@ -27,7 +27,7 @@ func _ready()-> void:
 func _process(delta)-> void:
 	if draggable:
 		if Input.get_action_strength("click") and draggable:
-			global_position = get_global_mouse_position()
+			#global_position = get_global_mouse_position()
 			is_dragging = true
 			dragging.emit(is_dragging)
 		elif not Input.get_action_strength("click") and is_dragging:

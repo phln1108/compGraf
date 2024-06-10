@@ -14,7 +14,7 @@ func _ready() -> void:
 	var file_name = cardsFolder.get_next()
 	while file_name != "":
 		if !cardsFolder.current_is_dir():
-			if file_name.ends_with(".png") or file_name.ends_with(".jpg") or file_name.ends_with(".jpeg"):
+			if file_name.ends_with(".png") or file_name.ends_with(".jpg") or file_name.ends_with(".jpeg") or file_name.ends_with(".webp"):
 				files.append("res://assets/cardIcons/" + file_name)
 		file_name = cardsFolder.get_next()
 		

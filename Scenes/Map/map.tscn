@@ -1,14 +1,23 @@
-[gd_scene load_steps=12 format=3 uid="uid://cebdwaibf5isv"]
+[gd_scene load_steps=23 format=3 uid="uid://cebdwaibf5isv"]
 
 [ext_resource type="Script" path="res://Scenes/Map/map.gd" id="1_d38tv"]
 [ext_resource type="PackedScene" uid="uid://clfepkedxjswg" path="res://Scenes/Card/card.tscn" id="1_tinaq"]
 [ext_resource type="Texture2D" uid="uid://dgo2gqhau23vo" path="res://assets/Backround.jpg" id="2_lrgqk"]
+[ext_resource type="Theme" uid="uid://bbt5up14ymi33" path="res://themes/buttonTheme.tres" id="3_wakcd"]
 [ext_resource type="PackedScene" uid="uid://3jff72gvcgju" path="res://Scenes/Bar/bar.tscn" id="4_k6op0"]
-[ext_resource type="Texture2D" uid="uid://e8t1d34x1rhu" path="res://assets/cardIcons/wallet.png" id="4_ygpce"]
-[ext_resource type="Texture2D" uid="uid://b6tss4l4qp55o" path="res://assets/cardIcons/education.png" id="5_n6oij"]
-[ext_resource type="Texture2D" uid="uid://bxguj0m3doe7k" path="res://assets/cardIcons/cardiogram.png" id="6_uxo22"]
-[ext_resource type="Texture2D" uid="uid://w2015ctdy3yx" path="res://assets/cardIcons/chat.png" id="7_m3y76"]
+[ext_resource type="Texture2D" uid="uid://b31it0qnqt2kg" path="res://assets/underMoney.svg" id="6_ohv4q"]
+[ext_resource type="Texture2D" uid="uid://bn4knvnbm7lcr" path="res://assets/progressMoney.svg" id="7_cwvpc"]
+[ext_resource type="Texture2D" uid="uid://b5c2eoa6qj5la" path="res://assets/underEd.svg" id="9_x55yq"]
 [ext_resource type="Texture2D" uid="uid://cd63kx5ylglx7" path="res://assets/gear.png" id="9_yo3ki"]
+[ext_resource type="Texture2D" uid="uid://dngenj3fnpxlc" path="res://assets/progressEd.svg" id="10_7wfh7"]
+[ext_resource type="PackedScene" uid="uid://c3l6y2lfxmf17" path="res://Scenes/SideMsg/SideMsg.tscn" id="11_t7gld"]
+[ext_resource type="Texture2D" uid="uid://cqolg8noq8g5b" path="res://assets/underHe.svg" id="12_0rqhk"]
+[ext_resource type="Texture2D" uid="uid://dkjscnw854obs" path="res://assets/progressHe.svg" id="13_pwg0k"]
+[ext_resource type="Texture2D" uid="uid://dpael6y58ccg5" path="res://assets/underMsg.svg" id="15_ufm6i"]
+[ext_resource type="Texture2D" uid="uid://b8bkx88kxarfe" path="res://assets/progressMsg.svg" id="16_fbblj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_om87u"]
+line_spacing = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2oxu"]
 size = Vector2(64, 64)
@@ -16,27 +25,38 @@ size = Vector2(64, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wa8ah"]
 size = Vector2(64, 64)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nkruh"]
+load_path = "res://.godot/imported/wallet.png-419934a227113da2cd7c7418cd9f872f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uolwt"]
+load_path = "res://.godot/imported/education.png-0d891cf94ce968b871a2dac8fbcb4604.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aav3m"]
+load_path = "res://.godot/imported/cardiogram.png-b695d6de769de38a5fdb285472243391.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3mduq"]
+load_path = "res://.godot/imported/chat.png-86d39f24807156fb14fbc57eff02fadd.ctex"
+
 [node name="Map" type="Control"]
 z_index = -1
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_d38tv")
 
 [node name="BackgroundImage" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_lrgqk")
 expand_mode = 1
-
-[node name="Background" type="ColorRect" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
@@ -53,75 +73,116 @@ offset_bottom = 696.0
 mouse_filter = 1
 color = Color(0.141176, 0.141176, 0.141176, 0.494118)
 
+[node name="cardContext" type="Label" parent="CardMenu/MainRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 112.0
+offset_right = 248.0
+offset_bottom = 232.0
+theme = ExtResource("3_wakcd")
+text = "opa isso é um textpo"
+label_settings = SubResource("LabelSettings_om87u")
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="AncorPoint" type="Marker2D" parent="CardMenu"]
-position = Vector2(576, 480)
+position = Vector2(576, 512)
 
 [node name="Card" parent="CardMenu/AncorPoint" instance=ExtResource("1_tinaq")]
-position = Vector2(0, 4)
 
 [node name="YesArea" type="Area2D" parent="CardMenu"]
+position = Vector2(0, 32)
 
 [node name="YesCollisionShape" type="CollisionShape2D" parent="CardMenu/YesArea"]
-position = Vector2(772, 336)
+position = Vector2(832, 336)
 shape = SubResource("RectangleShape2D_x2oxu")
 
 [node name="NoArea" type="Area2D" parent="CardMenu"]
+position = Vector2(0, 32)
 
 [node name="NoCollisionShape" type="CollisionShape2D" parent="CardMenu/NoArea"]
-position = Vector2(384, 336)
+position = Vector2(320, 336)
 shape = SubResource("RectangleShape2D_wa8ah")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 448.0
 offset_right = 704.0
-offset_bottom = 120.0
+offset_bottom = 104.0
 mouse_filter = 2
-color = Color(0.309804, 0.309804, 0.309804, 1)
+color = Color(0.278431, 0.266667, 0.27451, 1)
 
 [node name="incomeBar" parent="ColorRect" instance=ExtResource("4_k6op0")]
 layout_mode = 1
 offset_left = 32.0
-offset_top = 8.0
+offset_top = -16.0
 offset_right = 50.624
-offset_bottom = 91.24
-icon = ExtResource("4_ygpce")
+offset_bottom = 67.24
+under = ExtResource("6_ohv4q")
+progress = ExtResource("7_cwvpc")
+icon = SubResource("CompressedTexture2D_nkruh")
 
 [node name="educationBar" parent="ColorRect" instance=ExtResource("4_k6op0")]
 layout_mode = 1
-offset_left = 88.0
-offset_top = 8.0
-offset_right = 106.624
-offset_bottom = 91.24
-icon = ExtResource("5_n6oij")
+offset_left = 80.0
+offset_top = -16.0
+offset_right = 98.624
+offset_bottom = 67.24
+under = ExtResource("9_x55yq")
+progress = ExtResource("10_7wfh7")
+icon = SubResource("CompressedTexture2D_uolwt")
 id = 1
 
 [node name="healthBar" parent="ColorRect" instance=ExtResource("4_k6op0")]
 layout_mode = 1
-offset_left = 144.0
-offset_top = 8.0
-offset_right = 162.624
-offset_bottom = 91.24
-icon = ExtResource("6_uxo22")
+offset_left = 136.0
+offset_top = -16.0
+offset_right = 154.624
+offset_bottom = 67.24
+under = ExtResource("12_0rqhk")
+progress = ExtResource("13_pwg0k")
+icon = SubResource("CompressedTexture2D_aav3m")
 id = 2
 
 [node name="socialBar" parent="ColorRect" instance=ExtResource("4_k6op0")]
 layout_mode = 1
 offset_left = 200.0
-offset_top = 8.0
+offset_top = -16.0
 offset_right = 218.624
-offset_bottom = 91.24
-icon = ExtResource("7_m3y76")
+offset_bottom = 67.24
+under = ExtResource("15_ufm6i")
+progress = ExtResource("16_fbblj")
+icon = SubResource("CompressedTexture2D_3mduq")
 id = 3
 
 [node name="configButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1116.0
-offset_right = 1152.0
-offset_bottom = 36.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -36.0
+offset_top = -36.0
+grow_horizontal = 0
+grow_vertical = 0
 icon = ExtResource("9_yo3ki")
 icon_alignment = 1
 expand_icon = true
+
+[node name="noMsg" parent="." instance=ExtResource("11_t7gld")]
+layout_mode = 1
+offset_left = 32.0
+offset_top = -136.0
+offset_right = -736.0
+offset_bottom = -648.0
+
+[node name="yesMsg" parent="." instance=ExtResource("11_t7gld")]
+layout_mode = 1
+offset_left = 736.0
+offset_top = -136.0
+offset_right = -32.0
+offset_bottom = -648.0
 
 [connection signal="dragging" from="CardMenu/AncorPoint/Card" to="." method="_on_card_dragging"]
 [connection signal="area_entered" from="CardMenu/YesArea" to="." method="_on_yes_area_entered"]

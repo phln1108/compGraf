@@ -5,19 +5,22 @@ var explosion =  preload("res://Scenes/Explosion/explosion.tscn")
 
 var can_drag: bool = false
 var is_returned: bool = true
-var velocity = 450
+var velocity = 10
 
 @onready var ancor: Marker2D = $CardMenu/AncorPoint
 @onready var card = $CardMenu/AncorPoint/Card
-
 
 @onready var incomeBar = $ColorRect/incomeBar
 @onready var educationBar = $ColorRect/educationBar
 @onready var healthBar = $ColorRect/healthBar
 @onready var socialBar = $ColorRect/socialBar
 
+var motion: Vector2 = Vector2.ZERO
 
 func _ready():
+	$CardMenu/MainRect/cardContext.text = card.cardResource.text
+	$yesMsg.setMsg(card.cardResource.yesMsg)
+	$noMsg.setMsg(card.cardResource.noMsg)
 	SignalBus.connect("cardSideChosed",on_card_chose_side)
 
 func on_card_chose_side(textSelected,values):
@@ -26,6 +29,7 @@ func on_card_chose_side(textSelected,values):
 	healthBar.addValue(values[2])
 	socialBar.addValue(values[3])
 	
+	$CardMenu/MainRect/cardContext.text = ""	
 	var instance = explosion.instantiate()
 	add_child(instance)
 	instance.z_index = 10
@@ -44,13 +48,31 @@ func on_boom_end():
 	await get_tree().create_timer(0.2).timeout
 	ancor.visible = true
 	is_returned = true
+	$CardMenu/MainRect/cardContext.text = card.cardResource.text
+	$yesMsg.setMsg(card.cardResource.yesMsg)
+	$yesMsg.setMsg(card.cardResource.noMsg)
+	
+	
 
 func _process(delta):
-	pass
-	#if can_drag and is_returned:
+	if can_drag and is_returned:
+		var old_x = get_local_mouse_position().x - ancor.global_position.x
+		old_x = clamp(old_x/4,-100,100)
+		print(old_x)
+		var x = abs(old_x)
+		var y = (-0.02 * pow(x,2) + 5 * x) * 0.2 + x * 0.01
+		if old_x < 0:
+			x = -x
+		card.position = Vector2(x+old_x,-y)
+		print(Vector2(x+old_x,y))
 		#ancor.look_at(get_global_mouse_position())
 		#ancor.rotation_degrees = clamp(ancor.rotation_degrees + 90 , -45, 45)
-	#else:
+		
+	else:
+		if not card.global_position == ancor.global_position:
+			motion = ancor.global_position - card.global_position
+			card.global_position += motion*delta*velocity
+		
 		#if ancor.rotation_degrees > 0:
 			#ancor.rotation_degrees = clamp(ancor.rotation_degrees - (velocity * delta),0,180)
 		#elif ancor.rotation_degrees < 0:
@@ -66,6 +88,7 @@ func _on_no_area_entered(area):
 		educationBar.valueHint_show(CardHandler.currentCard.noValues[1])
 		healthBar.valueHint_show(CardHandler.currentCard.noValues[2])
 		socialBar.valueHint_show(CardHandler.currentCard.noValues[3])
+		$noMsg.show = true
 
 func _on_no_area_exited(area):
 	if area is Card and area.textSelected == Card.TextLabel.NO:
@@ -74,6 +97,7 @@ func _on_no_area_exited(area):
 		educationBar.valueHint_hide()
 		healthBar.valueHint_hide()
 		socialBar.valueHint_hide()
+		$noMsg.show = false
 
 func _on_yes_area_entered(area):
 	if area is Card:
@@ -82,6 +106,7 @@ func _on_yes_area_entered(area):
 		educationBar.valueHint_show(CardHandler.currentCard.yesValues[1])
 		healthBar.valueHint_show(CardHandler.currentCard.yesValues[2])
 		socialBar.valueHint_show(CardHandler.currentCard.yesValues[3])
+		$yesMsg.show = true
 
 func _on_yes_area_exited(area):
 	if area is Card and area.textSelected == Card.TextLabel.YES:
@@ -90,7 +115,11 @@ func _on_yes_area_exited(area):
 		educationBar.valueHint_hide()
 		healthBar.valueHint_hide()
 		socialBar.valueHint_hide()
+		$yesMsg.show = false
 
 
 func _on_config_button_pressed():
 	PauseMenu.Pauseshow(self)
+	
+
+

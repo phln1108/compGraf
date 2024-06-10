@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scenes/Card/card.gd" id="1_d41f0"]
 [ext_resource type="Texture2D" uid="uid://k0l38bh87g25" path="res://assets/cardBack.png" id="2_w0d1g"]
-[ext_resource type="Texture2D" uid="uid://e8t1d34x1rhu" path="res://assets/cardIcons/wallet.png" id="3_va4vm"]
 [ext_resource type="LabelSettings" uid="uid://bpk0dljibd7by" path="res://Resources/others/labelSettings.tres" id="5_yw50m"]
 
 [sub_resource type="GDScript" id="GDScript_btq4w"]
@@ -27,9 +26,12 @@ extends Resource
 
 "
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nkruh"]
+load_path = "res://.godot/imported/wallet.png-419934a227113da2cd7c7418cd9f872f.ctex"
+
 [sub_resource type="Resource" id="Resource_0h657"]
 script = SubResource("GDScript_btq4w")
-sprite = ExtResource("3_va4vm")
+sprite = SubResource("CompressedTexture2D_nkruh")
 text = "Você tem que passar a noite resolvendo um problema no trabalho, mas seu chefe irá lhe recompensar por isso"
 noMsg = "Ir dormir"
 yesMsg = "Fazer Hora extra"
@@ -50,11 +52,13 @@ script = ExtResource("1_d41f0")
 cardResource = SubResource("Resource_0h657")
 
 [node name="CardBack" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1.78814e-06, -40)
 scale = Vector2(0.8125, 0.84375)
 texture = ExtResource("2_w0d1g")
 
 [node name="ColorRect" type="ColorRect" parent="CardBack"]
+visible = false
 anchors_preset = -1
 anchor_left = -0.0853366
 anchor_top = -0.138259
@@ -70,13 +74,14 @@ metadata/_edit_use_anchors_ = true
 [node name="CardContent" type="Sprite2D" parent="."]
 position = Vector2(1.26362e-05, -40)
 scale = Vector2(0.8125, 0.8)
-texture = ExtResource("3_va4vm")
+texture = SubResource("CompressedTexture2D_nkruh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -40)
 shape = SubResource("RectangleShape2D_v8g6l")
 
 [node name="ContentLabel" type="Label" parent="."]
+visible = false
 modulate = Color(0, 0, 0, 1)
 offset_left = -344.0
 offset_top = 12.0
@@ -89,6 +94,7 @@ autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="ResponseLabel" type="Label" parent="."]
+visible = false
 offset_left = -348.0
 offset_top = -172.0
 offset_right = -140.0

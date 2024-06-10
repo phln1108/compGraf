@@ -19,9 +19,9 @@ config/icon="res://icon.svg"
 
 CardHandler="*res://singletons/CardHandler.gd"
 SignalBus="*res://singletons/SignalBus.gd"
-Achievements="*res://singletons/Achievements/Achievements.gd"
 PauseMenu="*res://Scenes/PauseMenu/PauseMenu.tscn"
 SoundManager="*res://singletons/SoundManager/SoundManager.tscn"
+Achievements="*res://singletons/Achievements.gd"
 
 [debug]
 
