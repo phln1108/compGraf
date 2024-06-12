@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Bar/bar.gd" id="1_gfoll"]
 [ext_resource type="Texture2D" uid="uid://b31it0qnqt2kg" path="res://assets/underMoney.svg" id="2_vqd1q"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qclv"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_niuhs"]
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 
@@ -27,7 +27,7 @@ offset_top = 32.0
 offset_right = 24.0
 offset_bottom = 88.0
 mouse_filter = 2
-theme_override_styles/fill = SubResource("StyleBoxFlat_4qclv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_niuhs")
 value = 50.0
 fill_mode = 3
 show_percentage = false

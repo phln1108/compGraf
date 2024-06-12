@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c18qap43dhupd" path="res://assets/1.png" id="1_mjaw1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3bqac"]
-font_size = 80
+font_size = 120
 
 [node name="GameMenu" type="Control"]
 layout_mode = 3
@@ -82,7 +82,7 @@ offset_right = 576.0
 offset_bottom = 192.0
 grow_horizontal = 2
 theme = ExtResource("1_c57di")
-text = "NOME DO JOGO"
+text = "U-LIFE"
 label_settings = SubResource("LabelSettings_3bqac")
 horizontal_alignment = 1
 vertical_alignment = 1
