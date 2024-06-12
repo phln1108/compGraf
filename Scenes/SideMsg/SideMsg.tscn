@@ -28,3 +28,4 @@ theme = ExtResource("1_0vsdg")
 label_settings = SubResource("LabelSettings_qkfkn")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2

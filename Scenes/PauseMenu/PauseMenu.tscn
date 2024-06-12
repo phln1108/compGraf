@@ -1,21 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://ck8rbx0qbctln"]
+[gd_scene load_steps=5 format=3 uid="uid://ck8rbx0qbctln"]
 
 [ext_resource type="Theme" uid="uid://bbt5up14ymi33" path="res://themes/buttonTheme.tres" id="1_7g076"]
 [ext_resource type="Script" path="res://Scenes/PauseMenu/PauseMenu.gd" id="1_011c6"]
-[ext_resource type="Texture2D" uid="uid://dgo2gqhau23vo" path="res://assets/Backround.jpg" id="2_dbrdu"]
 [ext_resource type="Texture2D" uid="uid://c18qap43dhupd" path="res://assets/1.png" id="2_qnli5"]
-[ext_resource type="FontFile" uid="uid://duguawr8o2pfq" path="res://fonts/Pixellari.ttf" id="2_uwryf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ecfur"]
 font_size = 80
 
-[sub_resource type="Theme" id="Theme_qknae"]
-default_font = ExtResource("2_uwryf")
-default_font_size = 14
-
 [node name="PauseMenu" type="Control"]
 process_mode = 3
-visible = false
 top_level = true
 layout_mode = 3
 anchors_preset = 15
@@ -85,30 +78,29 @@ grow_vertical = 2
 step = 10.0
 rounded = true
 
-[node name="BackgroungLabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 288.0
-offset_top = 312.0
-offset_right = 608.0
-offset_bottom = 376.0
+[node name="MusicLabel2" type="Label" parent="."]
+offset_left = 240.0
+offset_top = 296.0
+offset_right = 416.0
+offset_bottom = 358.0
 theme = ExtResource("1_7g076")
-text = "Plano de fundo:"
+text = "Musica:"
 vertical_alignment = 1
 
-[node name="ChooseBack" type="MenuButton" parent="."]
-layout_mode = 0
-offset_left = 640.0
-offset_top = 280.0
-offset_right = 864.0
-offset_bottom = 408.0
-theme = SubResource("Theme_qknae")
-icon = ExtResource("2_dbrdu")
-clip_text = true
-icon_alignment = 1
-expand_icon = true
-item_count = 1
-popup/item_0/text = "Pôr do sol"
-popup/item_0/id = 0
+[node name="MusicSlider2" type="HSlider" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 384.0
+offset_top = -28.0
+offset_right = -288.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 10.0
+rounded = true
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
@@ -129,5 +121,6 @@ theme = ExtResource("1_7g076")
 text = "Sair do Jogo"
 
 [connection signal="value_changed" from="MusicSlider" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="MusicSlider2" to="." method="_on_music_slider_2_value_changed"]
 [connection signal="pressed" from="Back" to="." method="Pausehide"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

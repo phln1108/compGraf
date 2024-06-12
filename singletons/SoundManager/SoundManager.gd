@@ -23,5 +23,5 @@ func unpause() -> void:
 		audio.play(position)
 		position = 0
 		
-func setVolume(value: float):
+func setVolume(value: float) -> void:
 	audio.volume_db = linear_to_db(value)

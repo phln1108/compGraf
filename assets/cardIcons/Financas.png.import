@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpu64nfjjffkt"
-path="res://.godot/imported/education.png-5c1865a3570f71b3c82b8e824e3ffcdc.ctex"
+uid="uid://ctnatiqo4rdim"
+path="res://.godot/imported/Financas.png-883c2d384d282494aea07c23988aecad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/education.png"
-dest_files=["res://.godot/imported/education.png-5c1865a3570f71b3c82b8e824e3ffcdc.ctex"]
+source_file="res://assets/cardIcons/Financas.png"
+dest_files=["res://.godot/imported/Financas.png-883c2d384d282494aea07c23988aecad.ctex"]
 
 [params]
 

@@ -23,7 +23,7 @@ func _ready():
 	$noMsg.setMsg(card.cardResource.noMsg)
 	SignalBus.connect("cardSideChosed",on_card_chose_side)
 
-func on_card_chose_side(textSelected,values):
+func on_card_chose_side(sideChosed: Card.TextLabel ,values: Array[float], type: String) -> void:
 	incomeBar.addValue(values[0])
 	educationBar.addValue(values[1])
 	healthBar.addValue(values[2])
@@ -57,14 +57,14 @@ func on_boom_end():
 func _process(delta):
 	if can_drag and is_returned:
 		var old_x = get_local_mouse_position().x - ancor.global_position.x
-		old_x = clamp(old_x/4,-100,100)
-		print(old_x)
+		old_x = clamp(old_x/3.5,-60,60)
+		#print(old_x)
 		var x = abs(old_x)
-		var y = (-0.02 * pow(x,2) + 5 * x) * 0.2 + x * 0.01
+		var y = (-0.02 * pow(x,2) + 5 * x) * 0.1 + x * 0.2
 		if old_x < 0:
 			x = -x
 		card.position = Vector2(x+old_x,-y)
-		print(Vector2(x+old_x,y))
+		#print(Vector2(x+old_x,y))
 		#ancor.look_at(get_global_mouse_position())
 		#ancor.rotation_degrees = clamp(ancor.rotation_degrees + 90 , -45, 45)
 		

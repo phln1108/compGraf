@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dok84lf7e8nmy"
-path="res://.godot/imported/retorno-do-investimento (1).png-fbf826dd5beefb134ca8d21ff99c43df.ctex"
+uid="uid://cbqto8i5gup1b"
+path="res://.godot/imported/yesChosed.jpg-a1e83d596a6213b48e87fae90cb04b74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cardIcons/retorno-do-investimento (1).png"
-dest_files=["res://.godot/imported/retorno-do-investimento (1).png-fbf826dd5beefb134ca8d21ff99c43df.ctex"]
+source_file="res://assets/helpBackScreens/yesChosed.jpg"
+dest_files=["res://.godot/imported/yesChosed.jpg-a1e83d596a6213b48e87fae90cb04b74.ctex"]
 
 [params]
 

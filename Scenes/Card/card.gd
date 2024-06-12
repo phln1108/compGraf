@@ -3,9 +3,7 @@ class_name Card
 
 @export var cardResource : JsonCard = null
 
-@onready var contentLabel = $ContentLabel
 @onready var cardContent = $CardContent
-@onready var responseLabel = $ResponseLabel
 
 var draggable: bool = false
 var is_dragging: bool = false
@@ -18,7 +16,6 @@ enum TextLabel{EMPTY,YES,NO}
 signal dragging
 
 func _ready()-> void:
-	setText(TextLabel.EMPTY)
 	cardResource = CardHandler.nex_card()
 	newCard()
 	
@@ -36,29 +33,23 @@ func _process(delta)-> void:
 			dragging.emit(is_dragging)
 			if  not textSelected == TextLabel.EMPTY:
 				if textSelected == TextLabel.YES:
-					SignalBus.emit_signal(	"cardSideChosed",textSelected,cardResource.yesValues)
+					SignalBus.emit_signal(	"cardSideChosed",textSelected,cardResource.yesValues,cardResource.type)
 				else :
-					SignalBus.emit_signal(	"cardSideChosed",textSelected,cardResource.noValues)
-					
-				var new_cardResource = CardHandler.nex_card()
+					SignalBus.emit_signal(	"cardSideChosed",textSelected,cardResource.noValues, cardResource.type)
+				
+				#await get_tree().create_timer(0.5).timeout
+				var new_cardResource: JsonCard = CardHandler.nex_card()
 				if !new_cardResource:
 					return
 				cardResource = new_cardResource
 				newCard()
+
+func newCard()-> void:
+	cardContent.texture = cardResource.sprite
 	
 func setText(textlabel: TextLabel) -> void:
 	textSelected = textlabel
-	match(textlabel):
-		TextLabel.EMPTY:
-			responseLabel.text = ""
-		TextLabel.YES:
-			responseLabel.text = cardResource.yesMsg
-		TextLabel.NO:
-			responseLabel.text = cardResource.noMsg
-
-func newCard()-> void:
-	contentLabel.text = cardResource.text
-	cardContent.texture = cardResource.sprite
+	
 
 func _on_mouse_entered()-> void:
 	inside = true

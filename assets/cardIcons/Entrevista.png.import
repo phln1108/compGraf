@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xdna8rrscrjs"
-path="res://.godot/imported/diplomado (1).png-d634941ef032ea81f688e59635418a32.ctex"
+uid="uid://dok84lf7e8nmy"
+path="res://.godot/imported/Entrevista.png-a1715b317dde79d92a083c7b57e2eb74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cardIcons/diplomado (1).png"
-dest_files=["res://.godot/imported/diplomado (1).png-d634941ef032ea81f688e59635418a32.ctex"]
+source_file="res://assets/cardIcons/Entrevista.png"
+dest_files=["res://.godot/imported/Entrevista.png-a1715b317dde79d92a083c7b57e2eb74.ctex"]
 
 [params]
 

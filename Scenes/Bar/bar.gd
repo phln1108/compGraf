@@ -4,7 +4,6 @@ extends Control
 @export var under: Texture = null
 @export var progress: Texture = null
 
-@export var icon: Texture
 @export var value: float = 50
 @export var id : int = 0
 
@@ -29,7 +28,6 @@ func _ready():
 	
 	bar.value = value
 	dot.visible = false
-	$icon.texture = icon
 
 func valueHint_show(point: float):
 	if !point:
@@ -46,20 +44,16 @@ func valueHint_hide():
 	dot.visible = false
 
 func addValue(point: float):
+	Achievements.setBarValue(id,point+value)
 	if value + point <= 0:
-		SignalBus.emit_signal("gameEnd",id)
-
+		SignalBus.emit_signal("gameEnd",id,false)
+	if value + point >= 100:
+		SignalBus.emit_signal("gameEnd",id,true)
+	
 	toAdd = point
-	if point < 0:
-		sb.bg_color = Color("ff0000")	
-	elif point >  0:
-		sb.bg_color = Color("00ff00")
-		
 	
 func _process(delta):
 	if is_inside_tree():
-		if icon != $icon.texture:
-			$icon.texture = icon
 		if under != $bar2.texture_under and under != null:
 			bar2.texture_under = under
 		if progress != $bar2.texture_progress and progress != null:

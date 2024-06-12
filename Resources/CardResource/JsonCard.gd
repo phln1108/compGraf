@@ -2,6 +2,8 @@
 extends Resource
 class_name JsonCard
 
+@export var type: String 
+
 @export var sprite: Texture
 
 @export var text: String

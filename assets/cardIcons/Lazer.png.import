@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctnatiqo4rdim"
-path="res://.godot/imported/carteira (1).png-c964c56a6b6459040fc252e2c63c48bd.ctex"
+uid="uid://hhs2pgwpgxco"
+path="res://.godot/imported/Lazer.png-786c236117f189744b180369a13ad17d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cardIcons/carteira (1).png"
-dest_files=["res://.godot/imported/carteira (1).png-c964c56a6b6459040fc252e2c63c48bd.ctex"]
+source_file="res://assets/cardIcons/Lazer.png"
+dest_files=["res://.godot/imported/Lazer.png-786c236117f189744b180369a13ad17d.ctex"]
 
 [params]
 

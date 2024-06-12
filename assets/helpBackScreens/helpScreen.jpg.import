@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3t3s25bdit42"
-path="res://.godot/imported/cardiogram.png-e4ca4cb03e918f98cf4f0dd7cf3cfede.ctex"
+uid="uid://5jtsddniy3hj"
+path="res://.godot/imported/helpScreen.jpg-b2e1557cffd2f52812231dc8c72754d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cardiogram.png"
-dest_files=["res://.godot/imported/cardiogram.png-e4ca4cb03e918f98cf4f0dd7cf3cfede.ctex"]
+source_file="res://assets/helpBackScreens/helpScreen.jpg"
+dest_files=["res://.godot/imported/helpScreen.jpg-b2e1557cffd2f52812231dc8c72754d0.ctex"]
 
 [params]
 

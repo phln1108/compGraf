@@ -38,29 +38,37 @@ stretch_mode = 5
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 432.0
-offset_top = 225.0
+offset_top = 216.0
 offset_right = 728.0
-offset_bottom = 289.0
+offset_bottom = 280.0
 theme = ExtResource("1_c57di")
 text = "Jogar	"
 
 [node name="ConfigButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 432.0
-offset_top = 352.0
+offset_top = 312.0
 offset_right = 728.0
-offset_bottom = 416.0
+offset_bottom = 376.0
 theme = ExtResource("1_c57di")
 text = "Configuração"
+
+[node name="HelpButton" type="Button" parent="."]
+offset_left = 432.0
+offset_top = 408.0
+offset_right = 728.0
+offset_bottom = 472.0
+theme = ExtResource("1_c57di")
+text = "Ajuda"
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 432.0
-offset_top = 480.0
+offset_top = 504.0
 offset_right = 728.0
-offset_bottom = 544.0
+offset_bottom = 568.0
 theme = ExtResource("1_c57di")
-text = "Exit"
+text = "Sair"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -89,4 +97,5 @@ color = Color(0, 0, 0, 0.729412)
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="ConfigButton" to="." method="_on_config_button_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

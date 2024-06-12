@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l0f1r3nmodwq"
-path="res://.godot/imported/baloes-de-ar (1).png-915d8ac7fc603806629ab6741d3ffeac.ctex"
+uid="uid://45uujyjuoa7o"
+path="res://.godot/imported/Saude.png-b0e714ab64b4d8e078cf19aa423d1b7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cardIcons/baloes-de-ar (1).png"
-dest_files=["res://.godot/imported/baloes-de-ar (1).png-915d8ac7fc603806629ab6741d3ffeac.ctex"]
+source_file="res://assets/cardIcons/Saude.png"
+dest_files=["res://.godot/imported/Saude.png-b0e714ab64b4d8e078cf19aa423d1b7d.ctex"]
 
 [params]
 

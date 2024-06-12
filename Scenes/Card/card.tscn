@@ -27,7 +27,6 @@ extends Resource
 "
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nkruh"]
-load_path = "res://.godot/imported/wallet.png-419934a227113da2cd7c7418cd9f872f.ctex"
 
 [sub_resource type="Resource" id="Resource_0h657"]
 script = SubResource("GDScript_btq4w")
@@ -52,7 +51,6 @@ script = ExtResource("1_d41f0")
 cardResource = SubResource("Resource_0h657")
 
 [node name="CardBack" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1.78814e-06, -40)
 scale = Vector2(0.8125, 0.84375)
 texture = ExtResource("2_w0d1g")
@@ -73,7 +71,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CardContent" type="Sprite2D" parent="."]
 position = Vector2(1.26362e-05, -40)
-scale = Vector2(0.8125, 0.8)
+scale = Vector2(0.7, 0.689)
 texture = SubResource("CompressedTexture2D_nkruh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

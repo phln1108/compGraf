@@ -1,15 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://csy83lr6qln5t"]
+[gd_scene load_steps=9 format=3 uid="uid://csy83lr6qln5t"]
 
 [ext_resource type="Script" path="res://Scenes/EndMenu/EndMenu.gd" id="1_qnpuk"]
 [ext_resource type="Texture2D" uid="uid://c18qap43dhupd" path="res://assets/1.png" id="2_b8d2u"]
 [ext_resource type="Theme" uid="uid://bbt5up14ymi33" path="res://themes/buttonTheme.tres" id="3_6t3ff"]
+[ext_resource type="FontFile" uid="uid://duguawr8o2pfq" path="res://fonts/Pixellari.ttf" id="4_0xway"]
 [ext_resource type="LabelSettings" uid="uid://dwngcengptodr" path="res://Resources/others/AchievementsLabel.tres" id="4_tftjc"]
+[ext_resource type="LabelSettings" uid="uid://bpk0dljibd7by" path="res://Resources/others/labelSettings.tres" id="5_ec4pi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ni78p"]
 font_size = 80
 
-[sub_resource type="LabelSettings" id="LabelSettings_wn1hg"]
-font_size = 22
+[sub_resource type="Theme" id="Theme_cguba"]
+default_font = ExtResource("4_0xway")
+default_font_size = 20
 
 [node name="EndMenu" type="Control"]
 process_mode = 3
@@ -62,14 +65,16 @@ anchors_preset = -1
 anchor_left = 0.493
 anchor_right = 0.5
 anchor_bottom = 0.042
-offset_left = -199.936
-offset_top = 144.0
-offset_right = 210.0
-offset_bottom = 175.784
+offset_left = -223.936
+offset_top = 136.0
+offset_right = 232.0
+offset_bottom = 196.784
 grow_horizontal = 2
-theme = ExtResource("3_6t3ff")
+theme = SubResource("Theme_cguba")
+theme_override_colors/font_color = Color(0.811765, 0.129412, 0.129412, 1)
 text = "Você deixou a barra de Saúde cair Demais"
-label_settings = SubResource("LabelSettings_wn1hg")
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Card" type="Label" parent="."]
 layout_mode = 1
@@ -78,13 +83,13 @@ anchor_left = 0.493
 anchor_right = 0.5
 anchor_bottom = 0.042
 offset_left = -223.936
-offset_top = 200.0
+offset_top = 272.0
 offset_right = 186.0
-offset_bottom = 231.784
+offset_bottom = 303.784
 grow_horizontal = 2
 theme = ExtResource("3_6t3ff")
 text = "Cartas:"
-label_settings = SubResource("LabelSettings_wn1hg")
+label_settings = ExtResource("5_ec4pi")
 
 [node name="CardsPLayed" type="Label" parent="Card"]
 layout_mode = 0
@@ -150,13 +155,13 @@ anchor_left = 0.493
 anchor_right = 0.5
 anchor_bottom = 0.042
 offset_left = 64.064
-offset_top = 200.0
+offset_top = 272.0
 offset_right = 474.0
-offset_bottom = 231.784
+offset_bottom = 303.784
 grow_horizontal = 2
 theme = ExtResource("3_6t3ff")
-text = "Variação:"
-label_settings = SubResource("LabelSettings_wn1hg")
+text = "Valor:"
+label_settings = ExtResource("5_ec4pi")
 
 [node name="InV" type="Label" parent="Variation"]
 layout_mode = 0
@@ -236,9 +241,9 @@ label_settings = ExtResource("4_tftjc")
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 432.0
-offset_top = 480.0
+offset_top = 496.0
 offset_right = 728.0
-offset_bottom = 544.0
+offset_bottom = 560.0
 theme = ExtResource("3_6t3ff")
 text = "Menu"
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl778s5yh2tjd"
-path="res://.godot/imported/wallet.png-8d6f0a6c9c1a21e57549a6d10b8c666e.ctex"
+uid="uid://xdna8rrscrjs"
+path="res://.godot/imported/Educacao.png-d1b3d52898b103e801f59acbff5eb4f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wallet.png"
-dest_files=["res://.godot/imported/wallet.png-8d6f0a6c9c1a21e57549a6d10b8c666e.ctex"]
+source_file="res://assets/cardIcons/Educacao.png"
+dest_files=["res://.godot/imported/Educacao.png-d1b3d52898b103e801f59acbff5eb4f8.ctex"]
 
 [params]
 
