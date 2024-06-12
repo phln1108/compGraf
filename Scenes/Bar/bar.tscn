@@ -3,12 +3,11 @@
 [ext_resource type="Script" path="res://Scenes/Bar/bar.gd" id="1_gfoll"]
 [ext_resource type="Texture2D" uid="uid://b31it0qnqt2kg" path="res://assets/underMoney.svg" id="2_vqd1q"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8147g"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qclv"]
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2om4t"]
-load_path = "res://.godot/imported/dolar-svgrepo-com (2).svg-649ee4613431a199bf4fb68f7d409e65.ctex"
 
 [node name="Bar" type="Control"]
 layout_mode = 3
@@ -28,7 +27,7 @@ offset_top = 32.0
 offset_right = 24.0
 offset_bottom = 88.0
 mouse_filter = 2
-theme_override_styles/fill = SubResource("StyleBoxFlat_8147g")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4qclv")
 value = 50.0
 fill_mode = 3
 show_percentage = false

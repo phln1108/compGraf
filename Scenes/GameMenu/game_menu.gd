@@ -19,5 +19,6 @@ func _on_exit_button_pressed() -> void:
 
 
 func _on_help_button_pressed():
+	SignalBus.emit_signal("restartGame")
 	get_tree().change_scene_to_file("res://Scenes/HelpMenu/helpMenu.tscn")
 	

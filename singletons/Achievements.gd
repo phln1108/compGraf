@@ -22,6 +22,7 @@ var barValues: Array[float] = [50,50,50,50]
 var countTypes: int
 
 func _ready() -> void:
+	SignalBus.connect("restartGame",onRestart)
 	SignalBus.connect("cardSideChosed",on_card_chose_side)
 	SignalBus.connect("gameEnd",on_game_end)
 	
@@ -49,6 +50,19 @@ func on_game_end(bar: int,top:bool) -> void:
 func setBarValue(bar:int, value: float) -> void:
 	barValues[bar] = clamp(value,0,100);
 	
-	
+func onRestart() -> void:
+	loseBar = -1
+	fromTop = false
+
+	countCards = 0
+
+	yesSideChosed = 0
+	noSideChosed = 0
+
+	variations = [0,0,0,0]
+	decreaseValue = [0,0,0,0]
+	increaseValue = [0,0,0,0]
+
+	barValues = [50,50,50,50]
 	
 	

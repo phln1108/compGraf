@@ -8,6 +8,7 @@ var currentCard: JsonCard
 var to_remove: String = ""
 
 func _ready() -> void:
+	SignalBus.connect("gameEnd",onRestart)
 	SignalBus.connect("cardSideChosed",on_card_chose_side)
 	addToDeck("res://cards.json")
 	
@@ -69,3 +70,7 @@ func addToDeck(path:String) -> void:
 			new_card.noValues.append(cardJson["noValues"][i])
 		
 		cards.append(new_card)
+
+func onRestart(bar: int, top: bool) -> void:
+	cards = []
+	addToDeck("res://cards.json")
