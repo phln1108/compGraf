@@ -70,7 +70,7 @@ func sethelp() -> void:
 	if backScreens[index]:
 		backcreen.texture = backScreens[index]
 		
-	for node: CanvasItem in $hints.get_children():
+	for node in $hints.get_children():
 		node.visible = false
 		
 	match index:
@@ -80,6 +80,3 @@ func sethelp() -> void:
 			$hints/barsHint.visible = true
 		6:
 			$hints/dotHint.visible = true
-		
-	
-	 
