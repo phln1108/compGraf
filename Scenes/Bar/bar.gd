@@ -14,19 +14,11 @@ var toAdd: float = 0
 var velocity: float = 60
 
 @onready var dot = $dot
-@onready var bar: ProgressBar = $bar
 @onready var bar2: TextureProgressBar = $bar2
 
 var sb: StyleBoxFlat = null
 
 func _ready():
-	sb = StyleBoxFlat.new()
-	bar.add_theme_stylebox_override("fill", sb)
-	sb.bg_color = Color("999999")
-	sb.corner_radius_top_left = 4
-	sb.corner_radius_top_right = 4
-	
-	bar.value = value
 	dot.visible = false
 
 func valueHint_show(point: float):
@@ -59,10 +51,7 @@ func _process(delta):
 		if progress != $bar2.texture_progress and progress != null:
 			bar2.texture_progress = progress
 		
-		
-		if toAdd == 0:
-			sb.bg_color = Color("999999")
-		else:
+		if toAdd != 0:
 			var v =  clamp(delta*velocity,0,abs(toAdd))
 			
 			if toAdd < 0:
@@ -70,6 +59,5 @@ func _process(delta):
 
 			toAdd -= v
 			value += v
-			bar.value  += v
 			bar2.value += v
 		

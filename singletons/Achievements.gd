@@ -1,10 +1,5 @@
 extends Node
 
-"""
-o que colocar como chievements
-- 
-
-"""
 var loseBar: int = -1
 var fromTop: bool = false
 

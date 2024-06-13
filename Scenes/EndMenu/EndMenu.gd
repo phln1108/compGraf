@@ -2,6 +2,8 @@ extends Control
 
 const barName: Array[String] = ["Finanças", "Educação", "Saúde", "Lazer"]
 
+var overSound: AudioStream = preload("res://sounds/over.mp3")
+
 var endTexts: Array[Array] = [[
 	"Oh não! Você ficou sem dinheiro. As contas se acumularam e você não conseguiu \
 	manter o equilíbrio financeiro. É hora de voltar à prancheta e aprender a \
@@ -38,14 +40,15 @@ var endTexts: Array[Array] = [[
 												$Variation/SoV/SoVNumber]
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	SoundManager.play(overSound)
 	if Achievements.loseBar == -1:
 		#var span: Label = $span
 		$span.set("theme_override_colors/font_color",Color(0,255,0))
-		$span.text = "Você conseguiu completar o Jogo. Parabens!"		
+		$span.text = "Graças às suas ótimas escolhas, você conseguiu superar o semestre sem muitas dificuldades. Parabéns!"		
 	else:
 		$span.text = endTexts[int(Achievements.fromTop)][Achievements.loseBar]
 	for i in range(4):
-		labelBarsVariation[i].text = str(Achievements.barValues[i])
+		labelBarsVariation[i].text = str("%.2f" % Achievements.barValues[i])
 	$Card/CardsPLayed/CardPlayedNumber.text = str(Achievements.countCards)
 	$Card/YesPlayed/YesPlayedNumber.text = str(Achievements.yesSideChosed)
 	$Card/NoPlayed/NoPlayedNumber.text = str(Achievements.noSideChosed)

@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://b66x81074wbsx"]
+[gd_scene load_steps=3 format=3 uid="uid://b66x81074wbsx"]
 
 [ext_resource type="Script" path="res://singletons/SoundManager/SoundManager.gd" id="1_7copp"]
+[ext_resource type="AudioStream" uid="uid://cpoeil4cvg5gu" path="res://sounds/backgroundsong.mp3" id="2_tiu60"]
 
 [node name="SoundManager" type="Node"]
 script = ExtResource("1_7copp")
 
 [node name="Audio" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_tiu60")
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

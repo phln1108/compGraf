@@ -43,16 +43,12 @@ var backScreens: Array[Texture] = [
 	null	
 ]
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	sethelp()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta) -> void:
-	pass
-
 func _on_backward_pressed() -> void:
+	SoundManager.play()
 	index -=1
 	sethelp()
 	$backward.visible = index != 0
@@ -60,13 +56,13 @@ func _on_backward_pressed() -> void:
 
 
 func _on_foward_pressed() -> void:
+	SoundManager.play()
 	index +=1
 	if index == len(texts):
 		get_tree().change_scene_to_file("res://Scenes/GameMenu/game_menu.tscn")
 		return
 	sethelp()
 	$backward.visible = index != 0
-	#$foward.visible = index != len(texts) -1
 	
 	
 func sethelp() -> void:

@@ -1,364 +1,299 @@
 [
-  {
-	"type": "Entrevista",
-	"text": "Você foi convidado para uma entrevista para uma bolsa de pesquisa em inteligência artificial na universidade.",
-	"noMsg": "Prefiro focar nos meus estudos regulares por enquanto.",
-	"yesMsg": "Vou aceitar! Pode ser uma ótima experiência acadêmica.",
-	"yesValues": [10.0, 18.0, 4.0, -6.0],
-	"noValues": [0, -5.0, -3.0, 0]
-  },
-  {
-	"type": "Entrevista",
-	"text": "Recebeu uma oferta para um estágio em uma empresa de desenvolvimento de software. O estágio promete boa experiência prática.",
-	"noMsg": "Vou passar, estou focado em outras atividades.",
-	"yesMsg": "Vou aceitar! Pode ser uma ótima oportunidade de aprendizado.",
-	"yesValues": [12.0, 15.0, 6.0, -5.0],
-	"noValues": [0, -4.0, -2.0, 0]
-  },
-  {
-	"type": "Entrevista",
-	"text": "Você foi convidado para uma entrevista para um estágio em uma empresa de análise de dados. O estágio oferece grande aprendizado e possível contratação.",
-	"noMsg": "Prefiro não me comprometer agora.",
-	"yesMsg": "Vou aceitar! Pode ser uma experiência valiosa em TI.",
-	"yesValues": [15.0, 10.0, -6.0, -4.0],
-	"noValues": [0, -5.0, -3.0, 0]
-  },
-  {
-	"type": "Entrevista",
-	"text": "Recebeu um convite para uma entrevista para uma bolsa de estudo em ciência de dados, que oferece um excelente aprendizado e contatos na área.",
-	"noMsg": "Vou focar nos meus estudos atuais.",
-	"yesMsg": "Vou aceitar! Pode ser uma boa experiência acadêmica.",
-	"yesValues": [8.0, 12.0, 5.0, -4.0],
-	"noValues": [0, -4.0, -2.0, 0]
-  },
-  {
-	"type": "Entrevista",
-	"text": "Foi convidado para uma entrevista para um estágio em desenvolvimento de aplicativos móveis. O estágio inclui treinamento especializado.",
-	"noMsg": "Prefiro não me comprometer agora.",
-	"yesMsg": "Vou aceitar! Pode ser uma oportunidade excelente de aprendizado prático.",
-	"yesValues": [10.0, 14.0, 4.0, -5.0],
-	"noValues": [0, -3.0, -2.0, 0]
-  },
+{
+"type": "Entrevista",
+"text": "Você foi convidado para uma entrevista para uma bolsa de pesquisa em inteligência artificial na universidade.",
+"noMsg": "Prefiro focar nos meus estudos regulares por enquanto.",
+"yesMsg": "Vou aceitar! Pode ser uma ótima experiência acadêmica.",
+"yesValues": [10.0, 18.0, 4.0, -6.0],
+"noValues": [0, -5.0, -3.0, 0]
+},
+{
+"type": "Entrevista",
+"text": "Recebeu uma oferta para um estágio em uma empresa de desenvolvimento de software. O estágio promete boa experiência prática.",
+"noMsg": "Vou passar, estou focado em outras atividades.",
+"yesMsg": "Vou aceitar! Pode ser uma ótima oportunidade de aprendizado.",
+"yesValues": [12.0, 15.0, 6.0, -5.0],
+"noValues": [0, -4.0, -2.0, 0]
+},
+{
+"type": "Entrevista",
+"text": "Você foi convidado para uma entrevista para um estágio em uma empresa de análise de dados. O estágio oferece grande aprendizado e possível contratação.",
+"noMsg": "Prefiro não me comprometer agora.",
+"yesMsg": "Vou aceitar! Pode ser uma experiência valiosa em TI.",
+"yesValues": [15.0, 10.0, -6.0, -4.0],
+"noValues": [0, -5.0, -3.0, 0]
+},
+{
+"type": "Entrevista",
+"text": "Recebeu um convite para uma entrevista para uma bolsa de estudo em ciência de dados, que oferece um excelente aprendizado e contatos na área.",
+"noMsg": "Vou focar nos meus estudos atuais.",
+"yesMsg": "Vou aceitar! Pode ser uma boa experiência acadêmica.",
+"yesValues": [8.0, 12.0, 5.0, -4.0],
+"noValues": [0, -4.0, -2.0, 0]
+},
+{
+"type": "Entrevista",
+"text": "Foi convidado para uma entrevista para um estágio em desenvolvimento de aplicativos móveis. O estágio inclui treinamento especializado.",
+"noMsg": "Prefiro não me comprometer agora.",
+"yesMsg": "Vou aceitar! Pode ser uma oportunidade excelente de aprendizado prático.",
+"yesValues": [10.0, 14.0, 4.0, -5.0],
+"noValues": [0, -3.0, -2.0, 0]
+},
 
-	{
-		"type": "Financas",
-		"text": "Você encontrou um desconto incrível no supermercado para aquele produto gourmet que você adora.",
-		"noMsg": "É, economizar é sempre bom!",
-		"yesMsg": "Delícia! Mas a carteira tá mais leve.",
-		"yesValues": [-12.7, 0, 6.4, 1.2],
-		"noValues": [7.5, 0, 0, 2.1]
-	},
-	{
-		"type": "Financas",
-		"text": "Uma festa incrível está rolando e o ingresso está pela metade do preço. Vai ou não vai?",
-		"noMsg": "Sabia que você era mão de vaca!",
-		"yesMsg": "Uhul! Festa boa e barata!",
-		"yesValues": [-15.3, 0, 22.8, -6.9],
-		"noValues": [11.2, 0, -3.0, 6.0]
-	},
-	{
-		"type": "Financas",
-		"text": "Sua faculdade está oferecendo um curso extra, mas ele custa uma grana considerável.",
-		"noMsg": "Entendi, economizar é importante.",
-		"yesMsg": "Ótima escolha para o futuro!",
-		"yesValues": [-19.8, 17.5, 0, -4.5],
-		"noValues": [12.1, -3.0, 0, 8.0]
-	},
-	{
-		"type": "Financas",
-		"text": "Um amigo está te convidando para uma viagem, mas o custo é alto. Vai nessa ou fica?",
-		"noMsg": "É, melhor poupar agora.",
-		"yesMsg": "Uau, viagem inesquecível!",
-		"yesValues": [-27.9, 0, 28.6, -9.2],
-		"noValues": [14.0, -2.5, 0, 9.7]
-	},
-	{
-		"type": "Financas",
-		"text": "Você recebeu uma proposta de um cartão de crédito com um limite alto, mas com taxas altas também.",
-		"noMsg": "Boa escolha! Melhor não arriscar.",
-		"yesMsg": "Cuidado com a tentação dos gastos!",
-		"yesValues": [4.8, 0, 4.7, -9.3],
-		"noValues": [9.0, 0, -2.1, 6.0]
-	},
-	{
-		"type": "Financas",
-		"text": "Você está tentado a comprar uma nova roupa para uma festa, mas ela custa caro.",
-		"noMsg": "Você é firme nas finanças!",
-		"yesMsg": "Vai arrasar na festa, mas a carteira chorou.",
-		"yesValues": [-11.2, 0, 14.3, 0],
-		"noValues": [8.3, 0, -4.7, 4.1]
-	},
-	{
-		"type": "Financas",
-		"text": "Um serviço de assinatura de filmes e séries está com uma promoção tentadora. Assina ou não?",
-		"noMsg": "É, você já tem o que ver.",
-		"yesMsg": "Maratonar vai ser ótimo!",
-		"yesValues": [-7.5, 0, 19.2, -2.8],
-		"noValues": [6.0, 0, -1.5, 3.0]
-	},
-	{
-		"type": "Financas",
-		"text": "Você está de olho em um novo gadget, mas ele custa metade do seu orçamento mensal.",
-		"noMsg": "Economia é prioridade!",
-		"yesMsg": "Vai curtir, mas prepare-se para economizar no resto do mês.",
-		"yesValues": [-28.3, 0, 12.5, -5.7],
-		"noValues": [14.6, 0, -3.0, 6.9]
-	},
-	{
-		"type": "Financas",
-		"text": "Seu computador quebrou e você precisa decidir se vai consertar ou comprar um novo.",
-		"noMsg": "Boa, melhor consertar mesmo.",
-		"yesMsg": "Computador novo, bolso vazio.",
-		"yesValues": [-29.9, 5.5, 10.3, -3.2],
-		"noValues": [-10.2, 4.0, -1.0, 5.1]
-	},
-	{
-		"type": "Financas",
-		"text": "Uma banda que você adora está vindo pra cidade, mas o ingresso é caríssimo.",
-		"noMsg": "Você vai sentir falta, mas a carteira agradece.",
-		"yesMsg": "Valeu cada centavo!",
-		"yesValues": [-24.1, 0, 25.7, -7.3],
-		"noValues": [11.3, 0, -5.0, 8.0]
-	},
-	{
-		"type": "Educacao",
-		"text": "Um colega sugere estudar junto para a prova, mas você prefere estudar sozinho.",
-		"noMsg": "Estudar sozinho pode ser mais eficiente.",
-		"yesMsg": "Estudar junto pode ser divertido e eficaz!",
-		"yesValues": [0, 12.8, 7.2, 0],
-		"noValues": [0, 10.3, -4.0, 1.2]
-	},
-	{
-		"type": "Educacao",
-		"text": "Você pode participar de um grupo de estudo semanal, mas é em um horário inconveniente.",
-		"noMsg": "Manter a rotina é importante.",
-		"yesMsg": "Grupo de estudo pode ser muito produtivo!",
-		"yesValues": [0, 20.3, -6.5, -3.0],
-		"noValues": [0, 14.5, -2.0, 4.2]
-	},
-	{
-		"type": "Educacao",
-		"text": "A biblioteca da faculdade está com novos livros, mas você teria que investir tempo para lê-los.",
-		"noMsg": "Você vai focar em outras atividades.",
-		"yesMsg": "Ótima escolha, conhecimento é tudo!",
-		"yesValues": [0, 18.7, -4.3, 2.5],
-		"noValues": [0, 10.0, -3.0, 1.0]
-	},
-	{
-		"type": "Educacao",
-		"text": "Você tem a chance de participar de um seminário importante, mas é fora da cidade.",
-		"noMsg": "Economiza tempo e dinheiro.",
-		"yesMsg": "Ótima experiência, mesmo com a correria.",
-		"yesValues": [-10.2, 22.4, 0, -5.1],
-		"noValues": [0, 12.0, -2.0, 2.5]
-	},
-	{
-		"type": "Educacao",
-		"text": "O professor sugere um livro extra para ler antes da próxima prova, mas ele é longo e complicado.",
-		"noMsg": "Você decidiu focar no básico.",
-		"yesMsg": "Boa escolha, o esforço extra vale a pena.",
-		"yesValues": [0, 25.7, -8.3, -2.0],
-		"noValues": [0, 10.5, -1.0, 3.0]
-	},
-	{
-		"type": "Educacao",
-		"text": "Um projeto opcional pode te dar pontos extras, mas vai consumir muito do seu tempo livre.",
-		"noMsg": "Você vai manter sua rotina leve.",
-		"yesMsg": "Esses pontos extras vão fazer a diferença!",
-		"yesValues": [0, 23.6, -15.1, -4.0],
-		"noValues": [0, 8.9, -2.0, 4.2]
-	},
-	{
-		"type": "Educacao",
-		"text": "Você pode se inscrever em um curso de idiomas, mas ele é caro e exige tempo.",
-		"noMsg": "É, economizar tempo e dinheiro pode ser bom.",
-		"yesMsg": "Aprender uma nova língua é uma ótima decisão!",
-		"yesValues": [-19.5, 20.1, 0, -4.7],
-		"noValues": [8.7, 10.5, -3.0, 4.0]
-	},
-	{
-		"type": "Educacao",
-		"text": "Uma excursão acadêmica está sendo organizada, mas custa caro e é longa.",
-		"noMsg": "Melhor ficar e estudar por aqui mesmo.",
-		"yesMsg": "Experiência acadêmica inesquecível!",
-		"yesValues": [-22.8, 15.7, 12.0, -6.0],
-		"noValues": [10.0, 9.5, -4.0, 5.0]
-	},
-	{
-		"type": "Educacao",
-		"text": "Você tem a chance de fazer um curso online intensivo, mas ele exige dedicação total.",
-		"noMsg": "Você vai focar nos estudos tradicionais.",
-		"yesMsg": "Um curso intensivo pode fazer a diferença!",
-		"yesValues": [-7.5, 19.8, -5.4, -2.3],
-		"noValues": [0, 11.5, -1.5, 2.7]
-	},
-	{
-		"type": "Educacao",
-		"text": "Uma palestra super interessante vai acontecer, mas ela é em um horário complicado.",
-		"noMsg": "Melhor focar nas aulas regulares.",
-		"yesMsg": "Vai valer a pena o esforço para assistir!",
-		"yesValues": [0, 13.7, -4.0, -1.8],
-		"noValues": [0, 9.5, -2.0, 2.0]
-	},
-	{
-		"type": "Lazer",
-		"text": "Um novo filme estreou no cinema, mas você tem uma prova importante amanhã.",
-		"noMsg": "Foco nos estudos, boa escolha!",
-		"yesMsg": "Cinema com amigos é sempre uma boa!",
-		"yesValues": [-5.0, -4.0, 15.3, 0],
-		"noValues": [0, 12.0, -3.0, 2.5]
-	},
-	{
-		"type": "Lazer",
-		"text": "Um show da sua banda favorita vai acontecer, mas você precisa estudar.",
-		"noMsg": "Boa, estudar é prioridade!",
-		"yesMsg": "Show incrível, mas cuidado com os estudos.",
-		"yesValues": [-10.3, -5.0, 20.0, -2.0],
-		"noValues": [0, 10.0, -2.0, 3.0]
-	},
-	{
-		"type": "Lazer",
-		"text": "Uma festa de aniversário está rolando, mas você está se sentindo cansado.",
-		"noMsg": "Descanso é importante!",
-		"yesMsg": "Diversão garantida, mas o corpo vai sentir.",
-		"yesValues": [-4.0, -3.0, 18.7, -5.2],
-		"noValues": [0, 0, -2.0, 7.0]
-	},
-	{
-		"type": "Lazer",
-		"text": "Amigos te convidaram para um passeio, mas você tinha planejado estudar.",
-		"noMsg": "Ficar em casa pode ser a melhor escolha.",
-		"yesMsg": "Passeio incrível, mas vai faltar tempo para estudar.",
-		"yesValues": [-6.0, -10.0, 23.4, -3.0],
-		"noValues": [0, 14.0, -1.5, 4.0]
-	},
-	{
-		"type": "Lazer",
-		"text": "Uma feira cultural está acontecendo na cidade, mas você está sem grana.",
-		"noMsg": "Economizar é sempre bom!",
-		"yesMsg": "Vai ser uma experiência cultural rica!",
-		"yesValues": [-8.7, 0, 15.6, 0],
-		"noValues": [7.0, -2.0, -1.0, 2.0]
-	},
-	{
-		"type": "Lazer",
-		"text": "Você tem a chance de fazer um passeio de fim de semana, mas ele é caro.",
-		"noMsg": "Melhor economizar para outra oportunidade.",
-		"yesMsg": "Um fim de semana para desestressar!",
-		"yesValues": [-16.4, 0, 18.9, -2.5],
-		"noValues": [9.5, -3.0, -1.0, 3.0]
-	},
-	{
-		"type": "Lazer",
-		"text": "Um evento esportivo vai acontecer, mas você está com muitas tarefas pendentes.",
-		"noMsg": "Foco nas obrigações é importante.",
-		"yesMsg": "Vai ser emocionante assistir ao vivo!",
-		"yesValues": [-5.2, -3.0, 20.3, -2.0],
-		"noValues": [0, 10.0, -2.0, 3.5]
-	},
-	{
-		"type": "Lazer",
-		"text": "Uma maratona de jogos online está sendo organizada pelos seus amigos.",
-		"noMsg": "Ficar de fora pode ser uma boa escolha.",
-		"yesMsg": "Diversão garantida, mas e os estudos?",
-		"yesValues": [-7.5, -6.0, 25.0, -4.0],
-		"noValues": [0, 12.0, -1.5, 4.2]
-	},
-	{
-		"type": "Lazer",
-		"text": "Uma exposição de arte está acontecendo, mas você está com pouco tempo.",
-		"noMsg": "Ficar em casa pode ser mais produtivo.",
-		"yesMsg": "Vai ser uma experiência inspiradora!",
-		"yesValues": [0, 0, 17.8, -2.5],
-		"noValues": [0, 0, -1.5, 5.0]
-	},
-	{
-		"type": "Lazer",
-		"text": "Uma aula de dança grátis está disponível, mas você tem que terminar um trabalho.",
-		"noMsg": "Melhor focar no trabalho.",
-		"yesMsg": "Dança é sempre bom para desestressar!",
-		"yesValues": [0, -2.0, 15.4, -3.0],
-		"noValues": [0, 7.0, -1.0, 3.0]
-	},
-	{
-		"type": "Saude",
-		"text": "Você pode começar a frequentar uma academia próxima, mas custa uma grana.",
-		"noMsg": "Economizar é uma boa ideia.",
-		"yesMsg": "Exercício faz bem para o corpo e mente!",
-		"yesValues": [-18.3, 0, 0, 22.5],
-		"noValues": [9.7, 0, 0, -2.0]
-	},
-	{
-		"type": "Saude",
-		"text": "Você está tentado a comprar um suplemento alimentar, mas ele é caro.",
-		"noMsg": "Boa escolha, economizar é importante.",
-		"yesMsg": "Vai te ajudar a manter a saúde em dia!",
-		"yesValues": [-12.4, 0, 0, 18.9],
-		"noValues": [7.0, 0, 0, -1.5]
-	},
-	{
-		"type": "Saude",
-		"text": "Um novo restaurante saudável abriu, mas os preços são altos.",
-		"noMsg": "Economizar em comida é sempre bom.",
-		"yesMsg": "Valeu a pena pela saúde!",
-		"yesValues": [-9.8, 0, 0, 16.5],
-		"noValues": [5.5, 0, 0, -1.0]
-	},
-	{
-		"type": "Saude",
-		"text": "Você pode fazer um check-up médico, mas custa caro e você está sem tempo.",
-		"noMsg": "Melhor deixar para depois.",
-		"yesMsg": "Prevenir é melhor que remediar!",
-		"yesValues": [-22.7, 0, 0, 27.0],
-		"noValues": [10.0, 0, 0, -2.5]
-	},
-	{
-		"type": "Saude",
-		"text": "Um amigo te convidou para uma corrida, mas você não está preparado fisicamente.",
-		"noMsg": "Melhor não se arriscar.",
-		"yesMsg": "Vai ser desafiador, mas ótimo para a saúde!",
-		"yesValues": [0, 0, 0, 20.4],
-		"noValues": [0, 0, -1.5, 3.0]
-	},
-	{
-		"type": "Saude",
-		"text": "Você tem a chance de ir a uma aula de ioga, mas custa uma grana e exige dedicação.",
-		"noMsg": "Economizar pode ser a melhor opção.",
-		"yesMsg": "Ioga vai te ajudar a relaxar!",
-		"yesValues": [-14.7, 0, 0, 18.3],
-		"noValues": [6.0, 0, -1.0, 2.5]
-	},
-	{
-		"type": "Saude",
-		"text": "Você pode começar a caminhar diariamente, mas terá que acordar mais cedo.",
-		"noMsg": "Dormir mais também faz bem.",
-		"yesMsg": "Caminhar vai te ajudar a manter a saúde em dia!",
-		"yesValues": [0, 0, 0, 20.1],
-		"noValues": [0, 0, 0, -2.0]
-	},
-	{
-		"type": "Saude",
-		"text": "Você está pensando em parar de fumar, mas vai ser um desafio enorme.",
-		"noMsg": "Talvez seja melhor não se estressar agora.",
-		"yesMsg": "Parar de fumar vai melhorar muito sua saúde!",
-		"yesValues": [0, 0, 0, 25.8],
-		"noValues": [0, 0, 0, -3.0]
-	},
-	{
-		"type": "Saude",
-		"text": "Você foi convidado para um retiro de fim de semana, mas é caro e você está sem tempo.",
-		"noMsg": "Ficar e descansar pode ser uma boa.",
-		"yesMsg": "Vai ser ótimo para recarregar as energias!",
-		"yesValues": [-17.5, 0, 0, 22.9],
-		"noValues": [9.0, 0, -1.5, 3.0]
-	},
-	{
-		"type": "Saude",
-		"text": "Você pode começar a meditar diariamente, mas precisa de dedicação.",
-		"noMsg": "Pode ser melhor manter sua rotina atual.",
-		"yesMsg": "Meditar vai te trazer muitos benefícios!",
-		"yesValues": [0, 0, 0, 18.0],
-		"noValues": [0, 0, 0, -2.5]
-	}
+{ 
+"type": "Financas",
+"text": "Uma festa incrível está rolando e o ingresso está pela metade do preço. Vai ou não vai?",
+"noMsg": "Sabia que você era mão de vaca!",
+"yesMsg": "Uhul! Festa boa e barata!",
+"yesValues": [-15.3, 0, 4.2, 7.4],
+"noValues": [10.2, 0, -3.0, -6.0]
+},
+{
+"type": "Financas",
+"text": "Sua faculdade está oferecendo um curso extra, mas ele custa uma grana considerável.",
+"noMsg": "Entendi, economizar é importante.",
+"yesMsg": "Ótima escolha para o futuro!",
+"yesValues": [-15.8, 11.5, -1.2, -4.5],
+"noValues": [10.1, -5.3, 0, 3.3]
+},
+{
+"type": "Financas",
+"text": "Um amigo está te convidando para uma viagem, mas o custo é alto. Vai nessa ou fica?",
+"noMsg": "É, melhor poupar agora.",
+"yesMsg": "Uau, viagem inesquecível!",
+"yesValues": [-22.9, 0, 6.4, 9.3],
+"noValues": [16.0, -2.0, 0, -9.7]
+},
+{
+"type": "Financas",
+"text": "Você está de olho em um novo gadget, mas ele custa metade do seu orçamento mensal.",
+"noMsg": "Economia é prioridade!",
+"yesMsg": "Vai curtir, mas prepare-se para economizar no resto do mês.",
+"yesValues": [-26.3, 0, 9.5, -5.7],
+"noValues": [16.6, 0, -4.3, 7]
+},
+{
+"type": "Financas",
+"text": "Seu computador quebrou e você precisa decidir se vai consertar ou comprar um novo.",
+"noMsg": "Boa, melhor consertar mesmo.",
+"yesMsg": "Computador novo, bolso vazio.",
+"yesValues": [-29, 9, 10, -4],
+"noValues": [-11, 5, -2.4, 4.8]
+},
+{
+"type": "Financas",
+"text": "Uma banda que você adora está vindo pra cidade, mas o ingresso é caríssimo.",
+"noMsg": "Você vai sentir falta, mas a carteira agradece.",
+"yesMsg": "Valeu cada centavo!",
+"yesValues": [-24.1, 0, 15.7, 8.3],
+"noValues": [13, 0, -6, -8.0]
+}, 
+{
+"type": "Educacao",
+"text": "Você pode participar de um grupo de estudo semanal, mas é em um horário inconveniente.",
+"noMsg": "Manter a rotina é importante.",
+"yesMsg": "Grupo de estudo pode ser muito produtivo!",
+"yesValues": [0, 20.3, -6.5, 9.0],
+"noValues": [0, -8.5, -2.0, -6.2]
+},
+{
+"type": "Educacao",
+"text": "A biblioteca da faculdade está com novos livros, mas você teria que investir tempo para lê-los.",
+"noMsg": "Você vai focar em outras atividades.",
+"yesMsg": "Ótima escolha, conhecimento é tudo!",
+"yesValues": [0, 18.7, -4.3, 2.5],
+"noValues": [0, -7.0, -3.0, 1.0]
+},
+{
+"type": "Educacao",
+"text": "Um projeto opcional pode te dar pontos extras, mas vai consumir muito do seu tempo livre.",
+"noMsg": "Você vai manter sua rotina leve.",
+"yesMsg": "Esses pontos extras vão fazer a diferença!",
+"yesValues": [0, 23.6, -15.1, 4.0],
+"noValues": [0, -8.9, -2.0, -4.2]
+},
+{
+"type": "Educacao",
+"text": "Você pode se inscrever em um curso de idiomas, mas ele é caro e exige tempo.",
+"noMsg": "É, economizar tempo e dinheiro pode ser bom.",
+"yesMsg": "Aprender uma nova língua é uma ótima decisão!",
+"yesValues": [-19.5, 20.1, -3.0, -4.7],
+"noValues": [8.7, -10.5, -3.0, 4.0]
+},
+{
+"type": "Educacao",
+"text": "Uma excursão acadêmica está sendo organizada, mas custa caro e é longa.",
+"noMsg": "Melhor não ir.",
+"yesMsg": "Experiência acadêmica inesquecível!",
+"yesValues": [-22.8, 15.7, -10.0, 6.0],
+"noValues": [10.0, -7.5, 4.0, -5.0]
+},
+{
+"type": "Educacao",
+"text": "Uma palestra super interessante vai acontecer, mas ela é em um horário complicado.",
+"noMsg": "Melhor focar nas aulas regulares.",
+"yesMsg": "Vai valer a pena o esforço para assistir!",
+"yesValues": [0, 13.7, -8.0, 0],
+"noValues": [0, 7.5, -2.0, 0]
+},
+{
+"type": "Lazer",
+"text": "Um novo filme estreou no cinema, mas você tem uma prova importante amanhã.",
+"noMsg": "Foco nos estudos, boa escolha!",
+"yesMsg": "Cinema com amigos é sempre uma boa!",
+"yesValues": [-5.0, -4.0, 0, 15],
+"noValues": [0, 12.0, 0, -4.0]
+},
+{
+"type": "Lazer",
+"text": "Um show da sua banda favorita vai acontecer, mas você precisa estudar.",
+"noMsg": "Boa, estudar é prioridade!",
+"yesMsg": "Show incrível, mas cuidado com os estudos.",
+"yesValues": [-10.3, -5.0, 0, 12],
+"noValues": [0, 10.0, -2.0, -2.0]
+},
+{
+"type": "Lazer",
+"text": "Amigos te convidaram para um passeio, mas você tinha planejado estudar.",
+"noMsg": "Ficar em casa pode ser a melhor escolha.",
+"yesMsg": "Passeio incrível, mas vai faltar tempo para estudar.",
+"yesValues": [-6.0, -9.0, 5, -3.0],
+"noValues": [0, 14.0, -1.5, 0]
+},
+{
+"type": "Lazer",
+"text": "Uma feira cultural está acontecendo na cidade, mas você está sem grana.",
+"noMsg": "Economizar é sempre bom!",
+"yesMsg": "Vai ser uma experiência cultural rica!",
+"yesValues": [-8.7, 0, 8, 0],
+"noValues": [7.0, -2.0, -1.0, 2.0]
+},
+{
+"type": "Lazer",
+"text": "Você tem a chance de fazer um passeio de fim de semana, mas ele é caro.",
+"noMsg": "Melhor economizar para outra oportunidade.",
+"yesMsg": "Um fim de semana para desestressar!",
+"yesValues": [-16.4, 0, 15, -2.5],
+"noValues": [9.5, -3.0, -1.0, 3.0]
+},
+{
+"type": "Lazer",
+"text": "Uma maratona de jogos online está sendo organizada pelos seus amigos.",
+"noMsg": "Ficar de fora pode ser uma boa escolha.",
+"yesMsg": "Diversão garantida, mas e os estudos?",
+"yesValues": [-7.5, -6.0, 12, -4.0],
+"noValues": [0, 10, -1.5, 4.2]
+},
+{
+"type": "Saude",
+"text": "Você pode começar a frequentar uma academia próxima, mas custa uma grana.",
+"noMsg": "Economizar é uma boa ideia.",
+"yesMsg": "Exercício faz bem para o corpo e mente!",
+"yesValues": [-18.3, 0, 21.5,5.0],
+"noValues": [9.7, 0, -6.0,-4.0]
+},
+{
+"type": "Saude",
+"text": "Você está tentado a comprar um suplemento alimentar, mas ele é caro.",
+"noMsg": "Boa escolha, economizar é importante.",
+"yesMsg": "Vai te ajudar a manter a saúde em dia!",
+"yesValues": [-12.4, 0,  18.9,0],
+"noValues": [7.0, 0, -6.5,0]
+},
+{
+"type": "Saude",
+"text": "Um novo restaurante saudável abriu, mas os preços são altos.",
+"noMsg": "Economizar em comida é sempre bom.",
+"yesMsg": "Valeu a pena pela saúde!",
+"yesValues": [-9.8, 0,  16.5,2.0],
+"noValues": [5.5, 0, -1.0,0]
+},
+{
+"type": "Saude",
+"text": "Você pode fazer um check-up médico, mas custa caro e você está sem tempo.",
+"noMsg": "Melhor deixar para depois.",
+"yesMsg": "Prevenir é melhor que remediar!",
+"yesValues": [-22.7, 0,  27.0,0],
+"noValues": [10.0, 0,  -10.5,0]
+},
+{
+"type": "Saude",
+"text": "Você tem a chance de ir a uma aula de ioga, mas custa uma grana e exige dedicação.",
+"noMsg": "Economizar pode ser a melhor opção.",
+"yesMsg": "Ioga vai te ajudar a relaxar!",
+"yesValues": [-14.7, 0, 18.3,0],
+"noValues": [6.0, 0, -4.5,-1.0]
+},
+{
+"type": "Saude",
+"text": "Você foi convidado para um retiro de fim de semana, mas é caro e você está sem tempo.",
+"noMsg": "Ficar e descansar pode ser uma boa.",
+"yesMsg": "Vai ser ótimo para recarregar as energias!",
+"yesValues": [-17.5, 0, 22.9, 4.0],
+"noValues": [9.0, 0, -3.0, -4.5]
+},
+{
+"type": "Financas",
+"text": "Você encontrou um livro raro relacionado ao seu curso com um desconto significativo. Compra ou deixa passar?",
+"noMsg": "Talvez encontre mais barato online.",
+"yesMsg": "Ótima aquisição para seus estudos!",
+"yesValues": [-15.0, 10.0, 0, 0],
+"noValues": [8.0, -5.0, 0, 0]
+},
+{
+"type": "Financas",
+"text": "Você recebeu uma oferta para vender suas anotações de aula. Aceita ou prefere guardá-las?",
+"noMsg": "Melhor manter suas anotações.",
+"yesMsg": "Dinheiro extra nunca é demais!",
+"yesValues": [20.0, -4.0, 0, 2.0],
+"noValues": [-8.0, 5.0, 0, -2.0]
+},
+{
+"type": "Educacao",
+"text": "Há uma palestra gratuita sobre avanços recentes no seu campo de estudo. Participa ou pula?",
+"noMsg": "Mais tempo para estudar em casa.",
+"yesMsg": "Informação atualizada é essencial!",
+"yesValues": [0, 15.0, -4.0, 2.0],
+"noValues": [0, -8.0, 4.0, -2.0]
+},
+{
+"type": "Educacao",
+"text": "Oportunidade de assistir a um workshop, mas é no mesmo horário de um encontro com amigos. O que escolhe?",
+"noMsg": "Amigos também são importantes.",
+"yesMsg": "Workshop pode abrir novas portas acadêmicas!",
+"yesValues": [-10.0, 18.0, -4.0,-8.0],
+"noValues": [0, -6.0, -2.2, 8.0]
+},
+{
+"type": "Lazer",
+"text": "Convite para uma viagem de fim de semana com amigos. Aceita, sabendo que vai perder a revisão para as provas?",
+"noMsg": "Foco nos estudos agora.",
+"yesMsg": "Um pequeno descanso antes da prova!",
+"yesValues": [-30.0, -12.0, 20.0, 17.0],
+"noValues": [15.0, 26.0, -12.0, -23.0]
+},
+{
+"type": "Lazer",
+"text": "Sessão de cinema à tarde com desconto. Pula suas responsabilidades por algumas horas de diversão?",
+"noMsg": "Responsabilidades em primeiro lugar.",
+"yesMsg": "Um filme sempre rejuvenesce!",
+"yesValues": [-13.0, -15.0, 12.0, 13.0],
+"noValues": [7.0, 9.0, -8.0, -10.3]
+},
+{
+"type": "Saude",
+"text": "Promoção de adesão anual na academia local. Investe em sua saúde física ou guarda o dinheiro?",
+"noMsg": "Dinheiro guardado para outras necessidades.",
+"yesMsg": "Saúde é um investimento a longo prazo!",
+"yesValues": [-25.0, 0, 26.0, 15.0],
+"noValues": [17.0, 0, -24.2, -10.0]
+},
+{
+"type": "Saude",
+"text": "Ofereceram-lhe uma consulta nutricional com desconto. Aceita para melhorar seus hábitos ou recusa?",
+"noMsg": "Vai continuar com seus hábitos atuais.",
+"yesMsg": "Melhorar a dieta é sempre bom!",
+"yesValues": [-14.5, 12, 18.6, 0],
+"noValues": [9.4, -3.3, -13.9, -4.2]
+}
 ]
-

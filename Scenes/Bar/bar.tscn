@@ -1,11 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://3jff72gvcgju"]
+[gd_scene load_steps=3 format=3 uid="uid://3jff72gvcgju"]
 
 [ext_resource type="Script" path="res://Scenes/Bar/bar.gd" id="1_gfoll"]
-[ext_resource type="Texture2D" uid="uid://b31it0qnqt2kg" path="res://assets/underMoney.svg" id="2_vqd1q"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_niuhs"]
-corner_radius_top_left = 4
-corner_radius_top_right = 4
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2om4t"]
 
@@ -19,18 +14,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_gfoll")
-
-[node name="bar" type="ProgressBar" parent="."]
-visible = false
-layout_mode = 0
-offset_top = 32.0
-offset_right = 24.0
-offset_bottom = 88.0
-mouse_filter = 2
-theme_override_styles/fill = SubResource("StyleBoxFlat_niuhs")
-value = 50.0
-fill_mode = 3
-show_percentage = false
 
 [node name="dot" type="Panel" parent="."]
 visible = false
@@ -52,6 +35,5 @@ step = 0.01
 value = 50.0
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("2_vqd1q")
 texture_progress = SubResource("CompressedTexture2D_2om4t")
 tint_under = Color(0.568627, 0.568627, 0.568627, 1)

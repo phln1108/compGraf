@@ -7,6 +7,8 @@ var can_drag: bool = false
 var is_returned: bool = true
 var velocity = 10
 
+var boomEfect : AudioStream = preload("res://sounds/cardChose.wav")
+
 @onready var ancor: Marker2D = $CardMenu/AncorPoint
 @onready var card = $CardMenu/AncorPoint/Card
 
@@ -24,6 +26,7 @@ func _ready():
 	SignalBus.connect("cardSideChosed",on_card_chose_side)
 
 func on_card_chose_side(sideChosed: Card.TextLabel ,values: Array[float], type: String) -> void:
+	SoundManager.play(boomEfect)
 	incomeBar.addValue(values[0])
 	educationBar.addValue(values[1])
 	healthBar.addValue(values[2])
@@ -50,34 +53,23 @@ func on_boom_end():
 	is_returned = true
 	$CardMenu/MainRect/cardContext.text = card.cardResource.text
 	$yesMsg.setMsg(card.cardResource.yesMsg)
-	$yesMsg.setMsg(card.cardResource.noMsg)
-	
-	
+	$noMsg.setMsg(card.cardResource.noMsg)
+
 
 func _process(delta):
 	if can_drag and is_returned:
 		var old_x = get_local_mouse_position().x - ancor.global_position.x
 		old_x = clamp(old_x/3.5,-60,60)
-		#print(old_x)
 		var x = abs(old_x)
 		var y = (-0.02 * pow(x,2) + 5 * x) * 0.1 + x * 0.2
 		if old_x < 0:
 			x = -x
 		card.position = Vector2(x+old_x,-y)
-		#print(Vector2(x+old_x,y))
-		#ancor.look_at(get_global_mouse_position())
-		#ancor.rotation_degrees = clamp(ancor.rotation_degrees + 90 , -45, 45)
-		
 	else:
 		if not card.global_position == ancor.global_position:
 			motion = ancor.global_position - card.global_position
 			card.global_position += motion*delta*velocity
-		
-		#if ancor.rotation_degrees > 0:
-			#ancor.rotation_degrees = clamp(ancor.rotation_degrees - (velocity * delta),0,180)
-		#elif ancor.rotation_degrees < 0:
-			#ancor.rotation_degrees = clamp(ancor.rotation_degrees + (velocity * delta),-180,0)
-		
+			
 func _on_card_dragging(is_dragging):
 	can_drag = is_dragging
 

@@ -38,37 +38,36 @@ stretch_mode = 5
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 432.0
-offset_top = 240.0
+offset_top = 248.0
 offset_right = 728.0
-offset_bottom = 304.0
+offset_bottom = 312.0
 theme = ExtResource("1_c57di")
 text = "Jogar	"
 
 [node name="ConfigButton" type="Button" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 432.0
-offset_top = 312.0
+offset_top = 336.0
 offset_right = 728.0
-offset_bottom = 376.0
+offset_bottom = 400.0
 theme = ExtResource("1_c57di")
 text = "Configuração"
 
 [node name="HelpButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 432.0
-offset_top = 376.0
+offset_top = 424.0
 offset_right = 728.0
-offset_bottom = 440.0
+offset_bottom = 488.0
 theme = ExtResource("1_c57di")
 text = "Ajuda"
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 432.0
-offset_top = 504.0
+offset_top = 512.0
 offset_right = 728.0
-offset_bottom = 568.0
+offset_bottom = 576.0
 theme = ExtResource("1_c57di")
 text = "Sair"
 

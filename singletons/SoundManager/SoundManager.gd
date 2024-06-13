@@ -3,8 +3,14 @@ extends Node
 var position: float = 0
 @onready var audio: AudioStreamPlayer = $Audio
 
+var button: AudioStream = preload("res://sounds/clickbutton.wav")
 
-func play(sound: AudioStream) -> void:
+func _ready():
+	audio.volume_db = linear_to_db(0.5)
+	$AudioStreamPlayer.volume_db = linear_to_db(0.5)
+
+func play(sound: AudioStream = button) -> void:
+	audio.stop()
 	audio.stream = sound
 	audio.play(0)
 	position = 0
@@ -25,3 +31,9 @@ func unpause() -> void:
 		
 func setVolume(value: float) -> void:
 	audio.volume_db = linear_to_db(value)
+
+func setVolumeMusic(value: float) -> void:
+	$AudioStreamPlayer.volume_db = linear_to_db(value)
+
+func _on_audio_stream_player_finished():
+	$AudioStreamPlayer.play()

@@ -1,82 +1,82 @@
 [
-  {
-	"type": "Financas",
-	"text": "A empresa oferece um bônus para quem entregar projetos antes do prazo, mas isso pode afetar seu tempo livre e saúde.",
-	"noMsg": "Prefiro manter meu ritmo de trabalho atual.",
-	"yesMsg": "Vou me esforçar para entregar antes e ganhar o bônus.",
-	"yesValues": [20.0, 5.0, -8.0, -7.0],
-	"noValues": [0, -3.0, 5.0, 2.0]
-  },
-  {
-	"type": "Educacao",
-	"text": "Foi convidado para um workshop de inovação tecnológica que exige tempo fora do trabalho, impactando seu lazer e descanso.",
-	"noMsg": "Estou ocupado com minhas tarefas regulares.",
-	"yesMsg": "Vou participar! É uma ótima chance de aprender.",
-	"yesValues": [0, 18.0, -7.0, -5.0],
-	"noValues": [0, -5.0, 3.0, 2.0]
-  },
-  {
-	"type": "Lazer",
-	"text": "A empresa está organizando uma viagem de integração para um local turístico, mas você terá que cobrir parte das despesas.",
-	"noMsg": "Prefiro não ir e manter meu tempo livre para outras atividades.",
-	"yesMsg": "Vou participar! É uma ótima oportunidade para relaxar.",
-	"yesValues": [-10.0, 0, 20.0, -5.0],
-	"noValues": [0, 0, -5.0, 2.0]
-  },
-  {
-	"type": "Saude",
-	"text": "Foi oferecido um programa de ginástica laboral durante o horário de trabalho, mas você terá que ajustar sua agenda.",
-	"noMsg": "Prefiro usar esse tempo para adiantar meu trabalho.",
-	"yesMsg": "Vou participar! Pode melhorar minha saúde.",
-	"yesValues": [0, -2.0, -4.0, 15.0],
-	"noValues": [0, 0, 2.0, -5.0]
-  },
-  {
-	"type": "Financas",
-	"text": "Um colega sugere que você se candidate para um projeto extra que oferece uma gratificação, mas vai exigir mais horas de trabalho.",
-	"noMsg": "Não quero sobrecarregar meu cronograma.",
-	"yesMsg": "Vou me candidatar! A gratificação extra será bem-vinda.",
-	"yesValues": [25.0, 4.0, -6.0, -5.0],
-	"noValues": [0, -2.0, 4.0, 1.0]
-  },
-  {
-	"type": "Educacao",
-	"text": "A empresa está oferecendo um curso gratuito de aperfeiçoamento, mas você terá que dedicar seu tempo livre a isso.",
-	"noMsg": "Não tenho tempo para cursos agora.",
-	"yesMsg": "Vou me inscrever! Pode ser muito útil.",
-	"yesValues": [0, 15.0, -5.0, -3.0],
-	"noValues": [0, -6.0, 3.0, 2.0]
-  },
-  {
-	"type": "Lazer",
-	"text": "Um grupo de colegas planeja um happy hour após o trabalho, mas isso pode afetar seu orçamento e saúde.",
-	"noMsg": "Estou cansado e prefiro ir para casa.",
-	"yesMsg": "Vou participar! Pode ser bom para relaxar.",
-	"yesValues": [-8.0, 0, 15.0, -4.0],
-	"noValues": [0, 0, -3.0, 1.0]
-  },
-  {
-	"type": "Saude",
-	"text": "A empresa oferece um check-up gratuito para monitorar a saúde dos funcionários, mas isso pode impactar seu horário de trabalho.",
-	"noMsg": "Estou saudável, não preciso de um check-up agora.",
-	"yesMsg": "Vou fazer! É importante para minha saúde.",
-	"yesValues": [0, -2.0, -3.0, 20.0],
-	"noValues": [0, 0, 2.0, -6.0]
-  },
-  {
-	"type": "Financas",
-	"text": "A empresa oferece um plano de participação nos lucros, mas exige comprometimento extra em projetos, afetando seu lazer e saúde.",
-	"noMsg": "Prefiro manter meu trabalho atual.",
-	"yesMsg": "Vou aceitar! Participar dos lucros será ótimo financeiramente.",
-	"yesValues": [30.0, 5.0, -8.0, -7.0],
-	"noValues": [0, 0, 4.0, -2.0]
-  },
-  {
-	"type": "Educacao",
-	"text": "Foi aberto um processo seletivo interno para um curso avançado em gestão de projetos. Requer dedicação fora do horário de trabalho.",
-	"noMsg": "Vou focar no meu trabalho atual.",
-	"yesMsg": "Vou me candidatar! Pode abrir novas portas.",
-	"yesValues": [0, 20.0, -6.0, -5.0],
-	"noValues": [0, -5.0, 2.0, 2.0]
-  }
+{
+"type": "Financas",
+"text": "A empresa oferece um bônus para quem entregar projetos antes do prazo, mas isso pode afetar seu tempo livre e saúde.",
+"noMsg": "Prefiro manter meu ritmo de trabalho atual.",
+"yesMsg": "Vou me esforçar para entregar antes e ganhar o bônus.",
+"yesValues": [20.0, 5.0, -8.0, -7.0],
+"noValues": [0, -3.0, 5.0, 2.0]
+},
+{
+"type": "Educacao",
+"text": "Foi convidado para um workshop de inovação tecnológica que exige tempo fora do trabalho, impactando seu lazer e descanso.",
+"noMsg": "Estou ocupado com minhas tarefas regulares.",
+"yesMsg": "Vou participar! É uma ótima chance de aprender.",
+"yesValues": [0, 18.0, -7.0, -5.0],
+"noValues": [0, -5.0, 3.0, 2.0]
+},
+{
+"type": "Lazer",
+"text": "A empresa está organizando uma viagem de integração para um local turístico, mas você terá que cobrir parte das despesas.",
+"noMsg": "Prefiro não ir e manter meu tempo livre para outras atividades.",
+"yesMsg": "Vou participar! É uma ótima oportunidade para relaxar.",
+"yesValues": [-10.0, 0, 20.0, 5.0],
+"noValues": [0, 0, -5.0, 2.0]
+},
+{
+"type": "Saude",
+"text": "Foi oferecido um programa de ginástica laboral durante o horário de trabalho, mas você terá que ajustar sua agenda.",
+"noMsg": "Prefiro usar esse tempo para adiantar meu trabalho.",
+"yesMsg": "Vou participar! Pode melhorar minha saúde.",
+"yesValues": [0, -2.0, 4.0, 15.0],
+"noValues": [0, 0, -2.0, -5.0]
+},
+{
+"type": "Financas",
+"text": "Um colega sugere que você se candidate para um projeto extra que oferece uma gratificação, mas vai exigir mais horas de trabalho.",
+"noMsg": "Não quero sobrecarregar meu cronograma.",
+"yesMsg": "Vou me candidatar! A gratificação extra será bem-vinda.",
+"yesValues": [25.0, 4.0, -8.0, -5.0],
+"noValues": [0, -2.0, 5.0, 1.5]
+},
+{
+"type": "Educacao",
+"text": "A empresa está oferecendo um curso gratuito de aperfeiçoamento, mas você terá que dedicar seu tempo livre a isso.",
+"noMsg": "Não tenho tempo para cursos agora.",
+"yesMsg": "Vou me inscrever! Pode ser muito útil.",
+"yesValues": [10, 15.0, -5.0, -4.0],
+"noValues": [0, -8.0, 6.0, 3.6]
+},
+{
+"type": "Lazer",
+"text": "Um grupo de colegas planeja um happy hour após o trabalho, mas isso pode afetar seu orçamento e saúde.",
+"noMsg": "Estou cansado e prefiro ir para casa.",
+"yesMsg": "Vou participar! Pode ser bom para relaxar.",
+"yesValues": [-8.0, 2.6, 11.3, 16.0],
+"noValues": [10, -4.0, -5.0, -13.0]
+},
+{
+"type": "Saude",
+"text": "A empresa oferece um check-up gratuito para monitorar a saúde dos funcionários, mas isso pode impactar seu horário de trabalho.",
+"noMsg": "Estou saudável, não preciso de um check-up agora.",
+"yesMsg": "Vou fazer! É importante para minha saúde.",
+"yesValues": [0, 4.8, 14.9, 18.0],
+"noValues": [0, 0, -16.0, -6.0]
+},
+{
+"type": "Financas",
+"text": "A empresa oferece um plano de participação nos lucros, mas exige comprometimento extra em projetos, afetando seu lazer e saúde.",
+"noMsg": "Prefiro manter meu trabalho atual.",
+"yesMsg": "Vou aceitar! Participar dos lucros será ótimo financeiramente.",
+"yesValues": [30.0, 7.0, -11.0, -9.0],
+"noValues": [0, 0, 7.0, -6.4]
+},
+{
+"type": "Educacao",
+"text": "Foi aberto um processo seletivo interno para um curso avançado em gestão de projetos. Requer dedicação fora do horário de trabalho.",
+"noMsg": "Vou focar no meu trabalho atual.",
+"yesMsg": "Vou me candidatar! Pode abrir novas portas.",
+"yesValues": [0, 20.0, -13.0, -8.0],
+"noValues": [0, -6.0, 10.5, 5.1]
+}
 ]

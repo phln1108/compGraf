@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://clfepkedxjswg"]
+[gd_scene load_steps=7 format=3 uid="uid://clfepkedxjswg"]
 
 [ext_resource type="Script" path="res://Scenes/Card/card.gd" id="1_d41f0"]
 [ext_resource type="Texture2D" uid="uid://k0l38bh87g25" path="res://assets/cardBack.png" id="2_w0d1g"]
-[ext_resource type="LabelSettings" uid="uid://bpk0dljibd7by" path="res://Resources/others/labelSettings.tres" id="5_yw50m"]
 
 [sub_resource type="GDScript" id="GDScript_btq4w"]
 script/source = "@tool
@@ -55,20 +54,6 @@ position = Vector2(1.78814e-06, -40)
 scale = Vector2(0.8125, 0.84375)
 texture = ExtResource("2_w0d1g")
 
-[node name="ColorRect" type="ColorRect" parent="CardBack"]
-visible = false
-anchors_preset = -1
-anchor_left = -0.0853366
-anchor_top = -0.138259
-anchor_right = 0.227163
-anchor_bottom = 0.392991
-offset_left = -106.154
-offset_top = -92.6057
-offset_right = 69.8462
-offset_bottom = 27.3943
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-
 [node name="CardContent" type="Sprite2D" parent="."]
 position = Vector2(1.26362e-05, -40)
 scale = Vector2(0.7, 0.689)
@@ -77,32 +62,6 @@ texture = SubResource("CompressedTexture2D_nkruh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -40)
 shape = SubResource("RectangleShape2D_v8g6l")
-
-[node name="ContentLabel" type="Label" parent="."]
-visible = false
-modulate = Color(0, 0, 0, 1)
-offset_left = -344.0
-offset_top = 12.0
-offset_right = -136.0
-offset_bottom = 100.0
-text = "opa"
-label_settings = ExtResource("5_yw50m")
-horizontal_alignment = 1
-autowrap_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="ResponseLabel" type="Label" parent="."]
-visible = false
-offset_left = -348.0
-offset_top = -172.0
-offset_right = -140.0
-offset_bottom = -84.0
-text = "opa"
-label_settings = ExtResource("5_yw50m")
-horizontal_alignment = 1
-vertical_alignment = 2
-autowrap_mode = 3
-metadata/_edit_use_anchors_ = true
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
