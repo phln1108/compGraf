@@ -122,7 +122,7 @@ offset_top = 472.0
 offset_right = 520.0
 offset_bottom = 536.0
 theme = ExtResource("1_7g076")
-text = "Sair do Jogo"
+text = "Ir para menu"
 
 [connection signal="value_changed" from="MusicSlider" to="." method="_on_music_value_changed"]
 [connection signal="value_changed" from="MusicSlider2" to="." method="_on_music_slider_2_value_changed"]
